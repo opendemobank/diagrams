@@ -1,0 +1,7 @@
+@startuml
+actor client
+node bank
+
+client -> bank
+@enduml
+
