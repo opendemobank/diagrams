@@ -17,7 +17,7 @@
 
 ## Class diagram
 
-![](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/opendemobank/diagrams/main/class/bank.iuml)
+![](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/opendemobank/diagrams/main/class/class.iuml)
 
 ## Object diagram
 
