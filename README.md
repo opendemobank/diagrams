@@ -1,6 +1,6 @@
 # :bank: Open Demo Bank Architecture Diagrams
 
-## Diagrams
+## Completed diagrams
 
 - [ ] [Class diagrams](class)
 - [ ] [Component diagrams](component)
@@ -10,6 +10,10 @@
 - [ ] [Stories](stories)
 - [ ] [Usecase diagrams](usecase)
 - [ ] [Userstories](userstories)
+
+## Component diagram
+
+![](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/opendemobank/diagrams/main/component/component.iuml)
 
 ## Class diagram
 

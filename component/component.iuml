@@ -1,0 +1,52 @@
+@startuml
+
+[Admin panel] as admin
+[Web client] as web
+[Mobile client] as mobile
+
+package "REST API" {
+    [Access Manager] as access
+    [Transaction Handler] as handler
+    [Transaction Logger] as logger
+    
+    () "Public methods" as methods1
+    () "Public methods" as methods2
+}
+
+database "SQL database" {
+    [User table] as users
+    [Administrator table] as administrators
+    [Transaction table] as transactions
+}
+
+database "Persistent storage" {
+    [Transaction logs] as logs
+}
+
+() "JDBC" as jdbc1
+() "JDBC" as jdbc2
+() "API" as api
+() "HTTP" as http
+
+handler -up- http
+admin ..> http : use
+web ..> http : use
+mobile ..> http : use
+
+access -right- methods1
+handler .left.> methods1 : use
+logger -left- methods2
+handler .right.> methods2 : use
+
+handler ..> jdbc1 : use
+jdbc1 -- transactions
+
+access ..> jdbc2 : use
+jdbc2 -- users
+jdbc2 -- administrators
+
+
+logger ..> api : use
+api -- logs
+
+@enduml
