@@ -1,0 +1,71 @@
+@startuml
+
+class Bank {
+    - User[] users
+    - Administrator[] administrators
+    - Account[] accounts
+    - Transaction[] transactions
+    - TransactionLogger transactionLogger
+    + Transaction createTransaction(String senderIBAN, String recipientIBAN, String description, float sum)
+    + Transaction modifyTransaction(UUID transactionID, String senderIBAN, String recipientIBAN, String description, float sum)
+    + bool storno(UUID transactionID)
+    + Transaction addFunds(String recipientIBAN, float sum)
+}
+
+class User {
+    - String email
+    - String password
+    - String phoneNumber
+    - Account account
+}
+
+class Account {
+    - String IBAN
+    - float balance
+    - User user
+    - Transaction[] transactions
+    + String requestTransaction(String description, float sum)
+}
+
+class Administrator {
+    - String email
+    - String password
+}
+
+class Transaction {
+    - final UUID id
+    - Account sender
+    - Account recipient
+    - String description
+    - float sum
+}
+
+interface TransactionLogger {
+    - TransactionLogEntry[] logs
+    + TransactionLogEntry logTransaction(String description)
+}
+
+class DBTransactionLogger {
+    - String connectionString
+    - TransactionLogEntry[] logs
+    + TransactionLogEntry logTransaction(String description)
+}
+
+class TransactionLogEntry {
+    - LocalDateTime dateTime
+    - String desctiption
+}
+
+Bank "1" *-- "0..n" User : has
+Bank "1" *-- "0..n" Administrator : has
+Bank "1" *-- "0..n" Account : has
+Bank "1" *-- "0..n" Transaction : has
+Bank "1" *-- "1" TransactionLogger : has
+
+Account "1" *-- "1" User : has
+Account "1" o-- "0 .. n" Transaction : has
+
+DBTransactionLogger --|> TransactionLogger : implements
+TransactionLogger "1" *-- "0..n" TransactionLogEntry  : contains
+
+@enduml

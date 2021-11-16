@@ -10,6 +10,10 @@
 - [ ] [Stories](stories)
 - [ ] [Usecase diagrams](usecase)
 
+## Class diagram
+
+![](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/opendemobank/diagrams/main/class/bank.iuml)
+
 ## Embedded PlantUML demo
 
 `![](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/opendemobank/diagrams/main/demo.iuml)`
