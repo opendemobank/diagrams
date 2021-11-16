@@ -56,14 +56,14 @@ class TransactionLogEntry {
     - String desctiption
 }
 
-Bank "1" *-- "0..n" User : has
-Bank "1" *-- "0..n" Administrator : has
+Bank "1" *-down- "0..n" User : has
+Bank "1" *-left- "0..n" Administrator : has
 Bank "1" *-- "0..n" Account : has
 Bank "1" *-- "0..n" Transaction : has
-Bank "1" *-- "1" TransactionLogger : has
+Bank "1" *-right- "1" TransactionLogger : has
 
-Account "1" *-- "1" User : has
-Account "1" o-- "0 .. n" Transaction : has
+Account "1" *-left- "1" User : has
+Account "1" o-right- "0 .. n" Transaction : has
 
 DBTransactionLogger --|> TransactionLogger : implements
 TransactionLogger "1" *-- "0..n" TransactionLogEntry  : contains
