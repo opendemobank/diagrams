@@ -19,6 +19,10 @@
 
 ![](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/opendemobank/diagrams/main/class/bank.iuml)
 
+## Object diagram
+
+![](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/opendemobank/diagrams/main/object/object.iuml)
+
 ## Embedded PlantUML demo
 
 `![](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/opendemobank/diagrams/main/demo.iuml)`
