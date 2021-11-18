@@ -2,7 +2,6 @@
 
 [Admin panel] as admin
 [Web client] as web
-[Mobile client] as mobile
 
 package "REST API" {
     [Access Manager] as access
@@ -31,7 +30,6 @@ database "Persistent storage" {
 handler -up- http
 admin ..> http : use
 web ..> http : use
-mobile ..> http : use
 
 access -right- methods1
 handler .left.> methods1 : use
