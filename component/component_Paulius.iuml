@@ -1,0 +1,42 @@
+@startuml Component
+
+component "<<Component>>\nWeb client" as webClient
+component "<<Component>>\nAdmin client" as adminClient
+
+component "<<Component>>\nInternal Payments System" {
+    component "<<Component>>\nIntegration" as integration #SandyBrown
+    component "<<Component>>\nAccess" as access #Snow
+    component "<<Component>>\nRepository" as repository #SkyBlue
+    component "<<Component>>\nDomain" as domain #Gold
+
+    () "interfaces" as  interface1
+    () "interfaces" as  interface2
+    () "interfaces" as  interface3
+    () "interfaces" as  interface4
+    () "interfaces" as  interface5
+
+    access -right- interface1
+    interface1 <. integration
+
+    domain -up- interface2
+    integration ..> interface2
+
+    domain -left- interface3
+    repository .> interface3
+
+    access -down- interface4
+    interface4 <.. repository
+
+    access -down- interface5
+    interface5 <.. domain
+}
+
+integration -up- http
+webClient ..> http
+adminClient ..> http
+
+component "<<Component>>\nPayments Database" as paymentsDatabase
+
+repository ..> jdbc
+jdbc -- paymentsDatabase
+@enduml
