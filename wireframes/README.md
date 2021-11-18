@@ -4,7 +4,7 @@
 
 ### Log in
 
-![](userLogin.png)
+![](userLogIn.png)
 
 ### User money transfer
 
