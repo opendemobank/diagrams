@@ -11,7 +11,7 @@ skinparam class {
     BorderColor<<Domain>> Red
 }
 
-interface IUsersCatalogue <<Access>> {
+interface IUsersRepo <<Access>> {
     + IUser[] getAll()
     + IUser getById(id)
     + bool add(User)
@@ -23,7 +23,7 @@ interface IUser <<Access>> {
     + Role getRole()
 }
 
-interface ICustomersCatalogue <<Domain>> {
+interface ICustomersRepo <<Domain>> {
     + ICustomer[] getAll()
     + ICustomer getById(id)
     + bool add(Customer)
@@ -35,14 +35,13 @@ interface ICustomer <<Domain>> {
     + String getPhoneNumber()
 }
 
-interface IAccountsCatalogue <<Domain>> {
+interface IAccountsRepo <<Domain>> {
     + IAccount[] getAll()
     + bool add(Account)
 }
 
 interface IAccount <<Domain>> {
     + ITransaction[] getTransactions()
-    + ITransfer[] getTransfers()
     + ICustomer getCustomer()
     + String getIBAN()
     + Date getOpenDate()
@@ -51,13 +50,12 @@ interface IAccount <<Domain>> {
     + changeBalance(BigDecimal)
 }
 
-interface ITransactionsCatalogue <<Domain>> {
+interface ITransactionsRepo <<Domain>> {
     + ITransaction[] getAll()
     + ITransaction[] getByAccount(IAccount)
     + ITransaction getById(int)
     + bool add(ITransaction)
-    + bool storno(ITransaction)
-    + bool edit(ITransaction)
+    + bool update(ITransaction)
 }
 
 interface ITransaction <<Domain>> {
@@ -73,19 +71,22 @@ interface ITransaction <<Domain>> {
     + bool setAmount(BigDecimal)
 }
 
-interface ICustomerTransfersCatalogue <<Domain>> {
-    + ITransfer[] getByAccount(IAccount)
-    + ITransfer getById(int)
+interface ITransactionLog <<Domain>> {
+    + int getLogId()
+    + bool setLogId()
 }
 
 interface ITransfer <<Domain>> {
+    + ITransaction getTransaction()
     + String getReceiverFullName()
     + String getAccountIBAN()
     + String getDescription()
     + BigDecimal getAmount()
-    + ITransfer setReceiver(String)
-    + ITransfer setDescription(String)
-    + ITransfer setAmount(BigDecimal)
+    + void setTransaction()
+    + void setReceiver(String)
+    + void setIBAN(String)
+    + void setDescription(String)
+    + void setAmount(BigDecimal)
 }
 
 interface IAccessContext <<Access>> {
@@ -96,16 +97,9 @@ interface IRepositoryContext <<Repository>> {
     + void setSomeDB()
 }
 
-IUser -> Role
-IUsersCatalogue o-- IUser
-ICustomer o-- IAccount
-ICustomersCatalogue o-- ICustomer
-IAccountsCatalogue o-- IAccount
-ITransactionsCatalogue o-- ITransaction
-ITransactionsCatalogue -> IAccount
-ICustomerTransfersCatalogue -> IAccount
-ICustomerTransfersCatalogue o-- ITransfer
-TransactionStatus <- ITransaction
+interface ITransactionsLogRepo <<Domain>> {
+    + bool add(ITransaction)
+}
 
 enum Role <<Access>> {
     USER
@@ -145,15 +139,15 @@ class Customer <<Domain>> {
     - Role role
     - String phoneNumber
     - IAccount[] accounts
-    - ICustomersCatalogue customersCatalogue
-    - IUsersCatalogue usersCatalogue
+    - ICustomersRepo customersRepo
+    - IUsersRepo usersRepo
 }
 
-class CustomersCatalogue <<Repository>> {
+class CustomersRepo <<Repository>> {
     - ICustomer[] customers
 }
 
-class UsersCatalogue <<Repository>> {
+class UsersRepo <<Repository>> {
     - IUser[] user
 }
 
@@ -162,7 +156,7 @@ class Administrator <<Domain>> {
     - String email
     - String password
     - Role role
-    - IUsersCatalogue usersCatalogue
+    - IUsersRepo usersRepo
 }
 
 class Service <<Access>> {
@@ -176,14 +170,7 @@ class PermissionCheck <<Access>> {
     + static bool canAccess(Service service)
 }
 
-PermissionCheck -> ServiceName
-Role <- PermissionCheck
-PermissionCheck -> IAccessContext
-PermissionCheck -> Service
-Service -left-> ServiceName
-IAccessContext -left-> IUser
-
-class AccountsCatalogue <<Repository>> {
+class AccountsRepo <<Repository>> {
     - IAccount[] accounts
 }
 
@@ -195,21 +182,29 @@ class Account <<Domain>> {
     - BigDecimal balance
     - ICustomer customer
     - ITransaction[] transactions
-    - IAccountsCatalogue accountsCatalogue
+    - IAccountsRepo accountsRepo
 }
 
-class TransactionsCatalogue <<Repository>> {
+class TransactionsRepo <<Repository>> {
     - ITransaction[] transactions
-    - ITransfer[] transactions
+}
+
+class TransactionsLogRepo <<Repository>> {
+
 }
 
 class Transaction <<Domain>> {
-    - int id
-    - IUser sessionUser
-    - TransactionStatus status
-    - LocalDateTime dateTime
-    - TransactionRecord[] transactionRecords
-    - ITransactionsCatalogue transactionsCatalogue
+    # int id
+    # IUser sessionUser
+    # TransactionStatus status
+    # String description
+    # LocalDateTime dateTime
+    # TransactionRecord[] transactionRecords
+    # ITransactionsRepo transactionsRepo
+}
+
+class TransactionLog <<Domain>> {
+    - int logId
 }
 
 class TransactionRecord <<Domain>> {
@@ -221,58 +216,135 @@ class TransactionRecord <<Domain>> {
 }
 
 class Transfer <<Domain>> {
+    - ITransaction transaction
     - String description
     - String receiversFullName
     - String accountIBAN
     - BigDecimal amount
-    - ICustomerTransfersCatalogue customerTransferCatalogue
 }
 
-IUser <|.. Customer
-ICustomer <|.. Customer
-IUser <|.. Administrator
-IUsersCatalogue <|. UsersCatalogue
-ICustomersCatalogue <|. CustomersCatalogue
-IAccount <|.. Account
-IAccountsCatalogue <|. AccountsCatalogue
-ITransaction <|.. Transaction
-TransactionsCatalogue .|>ITransactionsCatalogue
-ICustomerTransfersCatalogue <|. TransactionsCatalogue
-ITransfer <|.. Transfer
-Transaction o-- TransactionRecord
-TransactionRecord -> Direction
-Account -> AccountType
-Transfer -> Transaction
-
 class UserController <<Integration>> {
+    ...
 }
 
 class CustomerController <<Integration>> {
+    ...
 }
 
 class AccountController <<Integration>> {
+    ...
 }
 
 class TransferController <<Integration>> {
+    ...
 }
 
 class TransactionController <<Integration>> {
+    ...
 }
 
 class Context <<Integration>> {
     - static IUser currentUser
 }
 
-UserController --> IUsersCatalogue
-UserController ---> IUser
-CustomerController --> ICustomersCatalogue
-CustomerController ---> ICustomer
-AccountController ---> IAccountsCatalogue
-AccountController ----> IAccount
-TransferController ----> ICustomerTransfersCatalogue
-TransferController -----> ITransfer
-TransactionController ----> ITransactionsCatalogue
-TransactionController -----> ITransaction
-Context ---> IAccessContext
-Context --> IRepositoryContext
+class TransferManager <<Domain>> {
+    + IAccount account
+    + ITransfer[] getTransfers()
+    + void makeTransfer(ITransfer)
+    + void requestForTransfer(ITransfer)
+}
+
+class TransactionManager <<Domain>> {
+    + ITransaction[] getAllTransactions()
+    + ITransaction[] getAccountTransactions(int)
+    + ITransaction getTransaction(int)
+    + void createTransaction(ITransaction)
+    + void editTransaction(ITransaction)
+    + void stornoTransaction(ITransaction)
+}
+
+class AccountManager <<Domain>> {
+    + IAccount[] getAllAccounts()
+    + IAccount[] getCustomerAccounts(int)
+    + IAccount getAccount(int)
+    + void createAccount(IAccount)
+    + void deleteAccount(IAccount)
+}
+
+class CustomerManager <<Domain>> {
+    + ICustomer[] getAllCustomers()
+    + ICustomer getCustomer(int)
+    + ICustomer getCustomerByUserId(int)
+    + IUser getUser(int)
+    + void createCustomer(ICustomer)
+}
+
+class UserManager <<Domain>> {
+    + void login(String, String)
+    + void logout(int)
+    + IUser getUser(int)
+}
+
+IUser --> Role
+IUsersRepo "n" o--> "1" IUser
+ICustomer "n" o--> "1" IAccount
+ICustomersRepo "n" o--> "1" ICustomer
+IAccountsRepo "n" o--> "1" IAccount
+ITransactionsRepo "n" o--> "1" ITransaction
+ITransactionsRepo -> IAccount
+ITransaction -left-> TransactionStatus
+ITransfer -> ITransaction
+ITransaction <|- ITransactionLog
+ITransactionsLogRepo "n" o--> "1" ITransactionLog
+
+PermissionCheck -> ServiceName
+Role <- PermissionCheck
+IAccessContext <-- PermissionCheck
+PermissionCheck -> Service
+Service -> ServiceName
+IUser <- IAccessContext
+
+IUser <|.. Customer
+ICustomer <|.. Customer
+IUser <|.. Administrator
+IUsersRepo <|. UsersRepo
+ICustomersRepo <|. CustomersRepo
+IAccount <|.. Account
+AccountsRepo .|> IAccountsRepo
+ITransaction <|.. Transaction
+TransactionsRepo .|>ITransactionsRepo
+ITransactionsLogRepo <|. TransactionsLogRepo
+ITransfer <|.. Transfer
+Transaction o-- TransactionRecord
+TransactionRecord -> Direction
+Account -> AccountType
+ITransactionLog <|.. TransactionLog
+Transaction <|- TransactionLog
+
+Context ----> IAccessContext
+Context ---> IRepositoryContext
+
+TransferController --> TransferManager
+TransferManager ----> ITransactionsRepo
+TransferManager ---> IAccountsRepo
+TransferManager --> ICustomersRepo
+TransferManager -----> ITransfer
+
+TransactionController --> TransactionManager
+TransactionManager ----> ITransactionsRepo
+TransactionManager ----> ITransactionsLogRepo
+TransactionManager ---> IAccountsRepo
+TransactionManager --> ICustomersRepo
+
+AccountController --> AccountManager
+AccountManager ---> IAccountsRepo
+AccountManager --> ICustomersRepo
+
+CustomerController --> CustomerManager
+CustomerManager --> ICustomersRepo
+CustomerManager --> IUsersRepo
+
+UserController --> UserManager
+UserManager --> IUsersRepo
+
 @enduml
