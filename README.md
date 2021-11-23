@@ -10,6 +10,7 @@
 - [ ] [Stories](stories)
 - [ ] [Usecase diagrams](usecase)
 - [ ] [Userstories](userstories)
+- [ ] [Wireframes](wireframes)
 
 ## Component diagram
 
@@ -22,3 +23,7 @@
 ## Object diagram
 
 ![](object/object.svg)
+
+## Wireframes
+
+![](wireframes/userMoneyTransfer.png)
