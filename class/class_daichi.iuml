@@ -1,0 +1,47 @@
+@startuml
+class Bank{
+  __ functions __
+  + getAccount()
+  + createTransaction()
+  + executeTransaction()
+  __ variables __
+  -ArrayList Accounts
+}
+
+class Account{
+  __ functions __
+  + getBalance()
+  + setBalance()
+  + recordHistory()
+  __ variables __
+  -ArrayList trabsaction_history
+  -int balance
+  -User user
+  -String id
+  -String passworld
+}
+
+class Customer{
+  __ functions __
+  + changePassword()
+  __ variables __
+  -String full_name
+  -String email
+  -int phone_number
+}
+
+class Transaction{
+  __ functions __
+  + Transaction()
+  __ variables __
+  - String transaction_id
+  - Account sender
+  - Account reciever
+  - int amount
+}
+
+Bank "1" *-- "many" Account : contains
+Account "1" *-- "1" Customer
+Bank "1" *-- "many" Transaction : handles
+Account "1" o-- "many" Transaction : contains
+@enduml
