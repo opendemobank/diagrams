@@ -1,71 +1,350 @@
-@startuml
+@startuml ClassOverview
 
-class Bank {
-    - User[] users
-    - Administrator[] administrators
-    - Account[] accounts
-    - Transaction[] transactions
-    - TransactionLogger transactionLogger
-    + Transaction createTransaction(String senderIBAN, String recipientIBAN, String description, float sum)
-    + Transaction modifyTransaction(UUID transactionID, String senderIBAN, String recipientIBAN, String description, float sum)
-    + bool storno(UUID transactionID)
-    + Transaction addFunds(String recipientIBAN, float sum)
+skinparam class {
+    BackgroundColor<<Repository>> SkyBlue
+    BorderColor<<Repository>> Navy
+    BackgroundColor<<Access>> Snow
+    BorderColor<<Access>> Plum
+    BackgroundColor<<Integration>> SandyBrown
+    BorderColor<<Integration>> Tomato
+    BackgroundColor<<Domain>> Gold
+    BorderColor<<Domain>> Red
 }
 
-class User {
+interface IUsersRepo <<Access>> {
+    + IUser[] getAll()
+    + IUser getById(id)
+    + bool add(User)
+}
+interface IUser <<Access>> {
+    + void logIn(String, String)
+    + void logOut()
+    + int getId()
+    + Role getRole()
+}
+
+interface ICustomersRepo <<Domain>> {
+    + ICustomer[] getAll()
+    + ICustomer getById(id)
+    + bool add(Customer)
+}
+
+interface ICustomer <<Domain>> {
+    + IAccount[] getAccounts()
+    + IAccount getPrimaryAccount()
+    + String getPhoneNumber()
+}
+
+interface IAccountsRepo <<Domain>> {
+    + IAccount[] getAll()
+    + bool add(Account)
+}
+
+interface IAccount <<Domain>> {
+    + ITransaction[] getTransactions()
+    + ICustomer getCustomer()
+    + String getIBAN()
+    + Date getOpenDate()
+    + BigDecimal getBalance()
+    + AccountType getAccountType()
+    + changeBalance(BigDecimal)
+}
+
+interface ITransactionsRepo <<Domain>> {
+    + ITransaction[] getAll()
+    + ITransaction[] getByAccount(IAccount)
+    + ITransaction getById(int)
+    + bool add(ITransaction)
+    + bool update(ITransaction)
+}
+
+interface ITransaction <<Domain>> {
+    + int getId()
+    + int getDebitAccountID()
+    + int getCreditAccountID()
+    + BigDecimal getAmount()
+    + TransactionStatus getStatus()
+    + LocalDateTime getDateTime()
+    + bool setDateTime()
+    + bool setDebitAccountID(int)
+    + bool setCreditAccountID(int)
+    + bool setAmount(BigDecimal)
+}
+
+interface ITransactionLog <<Domain>> {
+    + int getLogId()
+    + bool setLogId()
+}
+
+interface ITransfer <<Domain>> {
+    + ITransaction getTransaction()
+    + String getReceiverFullName()
+    + String getAccountIBAN()
+    + String getDescription()
+    + BigDecimal getAmount()
+    + void setTransaction()
+    + void setReceiver(String)
+    + void setIBAN(String)
+    + void setDescription(String)
+    + void setAmount(BigDecimal)
+}
+
+interface IAccessContext <<Access>> {
+    + IUser getCurrentUser()
+}
+
+interface IRepositoryContext <<Repository>> {
+    + void setSomeDB()
+}
+
+interface ITransactionsLogRepo <<Domain>> {
+    + bool add(ITransaction)
+}
+
+enum Role <<Access>> {
+    USER
+    ADMIN
+}
+
+enum ServiceName <<Access>> {
+    LOGIN
+    LOGOUT
+    ADMIN_LOGIN
+    ADMIN_LOGOUT
+}
+
+enum AccountType <<Domain>> {
+    PRIMARY
+    SECONDARY
+}
+
+enum TransactionStatus <<Domain>> {
+    OK
+    CORECTION
+    STORNED
+    STORNO
+}
+
+enum Direction <<Domain>> {
+    CREDIT
+    DEBIT
+}
+
+class Customer <<Domain>> {
+    - int id
+    - int userId
     - String email
     - String password
+    - String fullName
+    - Role role
     - String phoneNumber
-    - Account account
+    - IAccount[] accounts
+    - ICustomersRepo customersRepo
+    - IUsersRepo usersRepo
 }
 
-class Account {
-    - String IBAN
-    - float balance
-    - User user
-    - Transaction[] transactions
-    + String requestTransaction(String description, float sum)
+class CustomersRepo <<Repository>> {
+    - ICustomer[] customers
 }
 
-class Administrator {
+class UsersRepo <<Repository>> {
+    - IUser[] user
+}
+
+class Administrator <<Domain>> {
+    - int id
     - String email
     - String password
+    - Role role
+    - IUsersRepo usersRepo
 }
 
-class Transaction {
-    - final UUID id
-    - Account sender
-    - Account recipient
+class Service <<Access>> {
+    - ServiceName serviceName
+    - String serviceAttribute
+    + void Service(ServiceName serviceName)
+    + Service addAtribute(String serviceAttribute)
+}
+
+class PermissionCheck <<Access>> {
+    + static bool canAccess(Service service)
+}
+
+class AccountsRepo <<Repository>> {
+    - IAccount[] accounts
+}
+
+class Account <<Domain>> {
+    - int id
+    - String IBAN
+    - AccountType accountType
+    - Date openDate
+    - BigDecimal balance
+    - ICustomer customer
+    - ITransaction[] transactions
+    - IAccountsRepo accountsRepo
+}
+
+class TransactionsRepo <<Repository>> {
+    - ITransaction[] transactions
+}
+
+class TransactionsLogRepo <<Repository>> {
+
+}
+
+class Transaction <<Domain>> {
+    # int id
+    # IUser sessionUser
+    # TransactionStatus status
+    # String description
+    # LocalDateTime dateTime
+    # TransactionRecord[] transactionRecords
+    # ITransactionsRepo transactionsRepo
+}
+
+class TransactionLog <<Domain>> {
+    - int logId
+}
+
+class TransactionRecord <<Domain>> {
+    - int id
+    - Account account
+    - Direction direction
+    - BigDecimal amount
+    - ITransaction transaction
+}
+
+class Transfer <<Domain>> {
+    - ITransaction transaction
     - String description
-    - float sum
+    - String receiversFullName
+    - String accountIBAN
+    - BigDecimal amount
 }
 
-interface TransactionLogger {
-    - TransactionLogEntry[] logs
-    + TransactionLogEntry logTransaction(String description)
+class UserController <<Integration>> {
+    ...
 }
 
-class DBTransactionLogger {
-    - String connectionString
-    - TransactionLogEntry[] logs
-    + TransactionLogEntry logTransaction(String description)
+class CustomerController <<Integration>> {
+    ...
 }
 
-class TransactionLogEntry {
-    - LocalDateTime dateTime
-    - String desctiption
+class AccountController <<Integration>> {
+    ...
 }
 
-Bank "1" *-down- "0..n" User : has
-Bank "1" *-left- "0..n" Administrator : has
-Bank "1" *-- "0..n" Account : has
-Bank "1" *-- "0..n" Transaction : has
-Bank "1" *-right- "1" TransactionLogger : has
+class TransferController <<Integration>> {
+    ...
+}
 
-Account "1" *-left- "1" User : has
-Account "1" o-right- "0 .. n" Transaction : has
+class TransactionController <<Integration>> {
+    ...
+}
 
-DBTransactionLogger --|> TransactionLogger : implements
-TransactionLogger "1" *-- "0..n" TransactionLogEntry  : contains
+class Context <<Integration>> {
+    - static IUser currentUser
+}
+
+class TransferManager <<Domain>> {
+    + IAccount account
+    + ITransfer[] getTransfers()
+    + void makeTransfer(ITransfer)
+    + void requestForTransfer(ITransfer)
+}
+
+class TransactionManager <<Domain>> {
+    + ITransaction[] getAllTransactions()
+    + ITransaction[] getAccountTransactions(int)
+    + ITransaction getTransaction(int)
+    + void createTransaction(ITransaction)
+    + void editTransaction(ITransaction)
+    + void stornoTransaction(ITransaction)
+}
+
+class AccountManager <<Domain>> {
+    + IAccount[] getAllAccounts()
+    + IAccount[] getCustomerAccounts(int)
+    + IAccount getAccount(int)
+    + void createAccount(IAccount)
+    + void deleteAccount(IAccount)
+}
+
+class CustomerManager <<Domain>> {
+    + ICustomer[] getAllCustomers()
+    + ICustomer getCustomer(int)
+    + ICustomer getCustomerByUserId(int)
+    + IUser getUser(int)
+    + void createCustomer(ICustomer)
+}
+
+class UserManager <<Domain>> {
+    + void login(String, String)
+    + void logout(int)
+    + IUser getUser(int)
+}
+
+IUser --> Role
+IUsersRepo "n" o--> "1" IUser
+ICustomer "n" o--> "1" IAccount
+ICustomersRepo "n" o--> "1" ICustomer
+IAccountsRepo "n" o--> "1" IAccount
+ITransactionsRepo "n" o--> "1" ITransaction
+ITransactionsRepo -> IAccount
+ITransaction -left-> TransactionStatus
+ITransfer -> ITransaction
+ITransaction <|- ITransactionLog
+ITransactionsLogRepo "n" o--> "1" ITransactionLog
+
+PermissionCheck -> ServiceName
+Role <- PermissionCheck
+IAccessContext <-- PermissionCheck
+PermissionCheck -> Service
+Service -> ServiceName
+IUser <- IAccessContext
+
+IUser <|.. Customer
+ICustomer <|.. Customer
+IUser <|.. Administrator
+IUsersRepo <|. UsersRepo
+ICustomersRepo <|. CustomersRepo
+IAccount <|.. Account
+AccountsRepo .|> IAccountsRepo
+ITransaction <|.. Transaction
+TransactionsRepo .|>ITransactionsRepo
+ITransactionsLogRepo <|. TransactionsLogRepo
+ITransfer <|.. Transfer
+Transaction o-- TransactionRecord
+TransactionRecord -> Direction
+Account -> AccountType
+ITransactionLog <|.. TransactionLog
+Transaction <|- TransactionLog
+
+Context ----> IAccessContext
+Context ---> IRepositoryContext
+
+TransferController --> TransferManager
+TransferManager ----> ITransactionsRepo
+TransferManager ---> IAccountsRepo
+TransferManager --> ICustomersRepo
+TransferManager -----> ITransfer
+
+TransactionController --> TransactionManager
+TransactionManager ----> ITransactionsRepo
+TransactionManager ----> ITransactionsLogRepo
+TransactionManager ---> IAccountsRepo
+TransactionManager --> ICustomersRepo
+
+AccountController --> AccountManager
+AccountManager ---> IAccountsRepo
+AccountManager --> ICustomersRepo
+
+CustomerController --> CustomerManager
+CustomerManager --> ICustomersRepo
+CustomerManager --> IUsersRepo
+
+UserController --> UserManager
+UserManager --> IUsersRepo
 
 @enduml
