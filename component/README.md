@@ -21,3 +21,8 @@
 ### Carolin
 
 ![](component_carolin.png)
+
+### Daichi
+
+![](component_daichi.png)
+
