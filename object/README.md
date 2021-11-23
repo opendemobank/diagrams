@@ -17,3 +17,7 @@
 ### Lana
 
 ![](object_lana.png)
+
+### Dachi
+
+![](object_daichi.png)
