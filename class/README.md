@@ -21,3 +21,7 @@
 ### Lana
 
 ![](class_lana.png)
+
+### Daichi
+
+![](class_daichi.png)
