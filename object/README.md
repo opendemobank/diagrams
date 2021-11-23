@@ -1,3 +1,19 @@
 # Object Diagrams
 
-![](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/opendemobank/diagrams/main/object/object.iuml)
+## Final
+
+![](object.svg)
+
+## Proposed diagrams
+
+### Volodymyr
+
+![](object_volodymyr.svg)
+
+### Carolin
+
+![](object_carolin.png)
+
+### Lana
+
+![](object_lana.png)

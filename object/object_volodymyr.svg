@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="578px" preserveAspectRatio="none" style="width:996px;height:578px;background:#FFFFFF;" version="1.1" viewBox="0 0 996 578" width="996px" zoomAndPan="magnify"><defs><filter height="300%" id="f4pzl3w4jvj82" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><rect fill="#FEFECE" filter="url(#f4pzl3w4jvj82)" height="43.2813" style="stroke:#A80036;stroke-width:1.5;" width="64" x="640.5" y="258.7168"/><text fill="#000000" font-family="sans-serif" font-size="20" lengthAdjust="spacing" textLength="50" x="647.5" y="279.2813">bank</text><line style="stroke:#A80036;stroke-width:1.5;" x1="641.5" x2="703.5" y1="285.998" y2="285.998"/><rect fill="#FEFECE" filter="url(#f4pzl3w4jvj82)" height="58.5625" style="stroke:#A80036;stroke-width:1.5;" width="234" x="748.5" y="126.2168"/><text fill="#000000" font-family="sans-serif" font-size="20" lengthAdjust="spacing" textLength="140" x="795.5" y="146.7813">administrator</text><line style="stroke:#A80036;stroke-width:1.5;" x1="749.5" x2="981.5" y1="153.498" y2="153.498"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="155" x="754.5" y="166.7803">email = "admin@bank.com"</text><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="222" x="754.5" y="178.4209">password = "supersecretadminpassword"</text><rect fill="#FEFECE" filter="url(#f4pzl3w4jvj82)" height="70.2031" style="stroke:#A80036;stroke-width:1.5;" width="196" x="398.5" y="245.2168"/><text fill="#000000" font-family="sans-serif" font-size="20" lengthAdjust="spacing" textLength="57" x="468" y="265.7813">user1</text><line style="stroke:#A80036;stroke-width:1.5;" x1="399.5" x2="593.5" y1="272.498" y2="272.498"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="131" x="404.5" y="285.7803">email = "alice@foo.bar"</text><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="124" x="404.5" y="297.4209">password = "password"</text><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="184" x="404.5" y="309.0615">phoneNumber = "+37253123456"</text><rect fill="#FEFECE" filter="url(#f4pzl3w4jvj82)" height="58.5625" style="stroke:#A80036;stroke-width:1.5;" width="195" x="394" y="375.2168"/><text fill="#000000" font-family="sans-serif" font-size="20" lengthAdjust="spacing" textLength="94" x="444.5" y="395.7813">account1</text><line style="stroke:#A80036;stroke-width:1.5;" x1="395" x2="588" y1="402.498" y2="402.498"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="183" x="400" y="415.7803">IBAN = "EE471000001020145685"</text><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="82" x="400" y="427.4209">balance = 90.0</text><rect fill="#FEFECE" filter="url(#f4pzl3w4jvj82)" height="58.5625" style="stroke:#A80036;stroke-width:1.5;" width="195" x="767" y="375.2168"/><text fill="#000000" font-family="sans-serif" font-size="20" lengthAdjust="spacing" textLength="93" x="818" y="395.7813">account2</text><line style="stroke:#A80036;stroke-width:1.5;" x1="768" x2="961" y1="402.498" y2="402.498"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="183" x="773" y="415.7803">IBAN = "EE471000001020132459"</text><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="82" x="773" y="427.4209">balance = 10.0</text><rect fill="#FEFECE" filter="url(#f4pzl3w4jvj82)" height="70.2031" style="stroke:#A80036;stroke-width:1.5;" width="196" x="760.5" y="245.2168"/><text fill="#000000" font-family="sans-serif" font-size="20" lengthAdjust="spacing" textLength="56" x="830.5" y="265.7813">user2</text><line style="stroke:#A80036;stroke-width:1.5;" x1="761.5" x2="955.5" y1="272.498" y2="272.498"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="128" x="766.5" y="285.7803">email = "bob@bar.baz"</text><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="110" x="766.5" y="297.4209">password = "qwerty"</text><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="184" x="766.5" y="309.0615">phoneNumber = "+37253654321"</text><rect fill="#FEFECE" filter="url(#f4pzl3w4jvj82)" height="70.2031" style="stroke:#A80036;stroke-width:1.5;" width="260" x="361.5" y="494.2168"/><text fill="#000000" font-family="sans-serif" font-size="20" lengthAdjust="spacing" textLength="129" x="427" y="514.7813">transaction1</text><line style="stroke:#A80036;stroke-width:1.5;" x1="362.5" x2="620.5" y1="521.498" y2="521.498"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="248" x="367.5" y="534.7803">id = 417eacbe-52ef-4ceb-a8c3-fbcc177a0134</text><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="180" x="367.5" y="546.4209">description = "Special operation"</text><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="68" x="367.5" y="558.0615">sum = 100.0</text><rect fill="#FEFECE" filter="url(#f4pzl3w4jvj82)" height="70.2031" style="stroke:#A80036;stroke-width:1.5;" width="262" x="656.5" y="494.2168"/><text fill="#000000" font-family="sans-serif" font-size="20" lengthAdjust="spacing" textLength="128" x="723.5" y="514.7813">transaction2</text><line style="stroke:#A80036;stroke-width:1.5;" x1="657.5" x2="917.5" y1="521.498" y2="521.498"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="250" x="662.5" y="534.7803">id = ccac7c71-c32d-43a7-9d08-8e03f230214a</text><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="127" x="662.5" y="546.4209">description = "Thanks!"</text><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="61" x="662.5" y="558.0615">sum = 10.0</text><rect fill="#FEFECE" filter="url(#f4pzl3w4jvj82)" height="46.9219" style="stroke:#A80036;stroke-width:1.5;" width="466" x="247.5" y="132.2168"/><text fill="#000000" font-family="sans-serif" font-size="20" lengthAdjust="spacing" textLength="269" x="346" y="152.7813">postgrestransactionlogger</text><line style="stroke:#A80036;stroke-width:1.5;" x1="248.5" x2="712.5" y1="159.498" y2="159.498"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="454" x="253.5" y="172.7803">connectionString = "postgresql://postgres:postgres@postgres:5432/transaction_logs"</text><rect fill="#FEFECE" filter="url(#f4pzl3w4jvj82)" height="58.5625" style="stroke:#A80036;stroke-width:1.5;" width="455" x="499" y="7.2168"/><text fill="#000000" font-family="sans-serif" font-size="20" lengthAdjust="spacing" textLength="99" x="677" y="27.7813">logentry1</text><line style="stroke:#A80036;stroke-width:1.5;" x1="500" x2="953" y1="34.498" y2="34.498"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="248" x="505" y="47.7803">dateTime = Tue Nov 16 04:50:19 PM EET 2021</text><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="443" x="505" y="59.4209">description = "Transaction 417eacbe-52ef-4ceb-a8c3-fbcc177a0134 was created"</text><rect fill="#FEFECE" filter="url(#f4pzl3w4jvj82)" height="58.5625" style="stroke:#A80036;stroke-width:1.5;" width="457" x="7" y="7.2168"/><text fill="#000000" font-family="sans-serif" font-size="20" lengthAdjust="spacing" textLength="98" x="186.5" y="27.7813">logentry2</text><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="463" y1="34.498" y2="34.498"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="246" x="13" y="47.7803">dateTime = Tue Nov 19 02:39:57 PM EET 2021</text><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacing" textLength="445" x="13" y="59.4209">description = "Transaction ccac7c71-c32d-43a7-9d08-8e03f230214a was created"</text><!--MD5=[80c9f61577c8cf1a7be71561ada23f76]
+link administrator to bank--><path codeLine="58" d="M820.25,185.4378 C788.735,205.4408 746.945,231.9648 715.853,251.6998 " fill="none" id="administrator-to-bank" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="704.505,258.9028,711.7143,259.0643,714.6362,252.4717,707.4269,252.3102,704.505,258.9028" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="31" x="777.2898" y="204.8887">bank</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="93" x="659.1738" y="261.3237">administrators</text><!--MD5=[12a259f16906e3ec2e00d6a57e24c72f]
+link user1 to bank--><path codeLine="59" d="M594.812,280.2168 C605.6,280.2168 616.387,280.2168 627.174,280.2168 " fill="none" id="user1-to-bank" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="640.333,280.2168,634.333,276.2168,628.333,280.2168,634.333,284.2168,640.333,280.2168" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="35" x="602.4131" y="275.7077">users</text><!--MD5=[a7f803636f47824bf405df38d1866f78]
+reverse link bank to user2--><path codeLine="60" d="M717.846,280.2168 C732.016,280.2168 746.186,280.2168 760.357,280.2168 " fill="none" id="bank-backto-user2" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="704.832,280.2168,710.832,284.2168,716.832,280.2168,710.832,276.2168,704.832,280.2168" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="35" x="712.4625" y="293.4208">users</text><!--MD5=[7dd50a8252ee5ddcd680d73f96f960e8]
+reverse link bank to account1--><path codeLine="61" d="M631.161,309.1948 C602.019,328.9178 563.114,355.2488 533.768,375.1098 " fill="none" id="bank-backto-account1" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="642.205,301.7208,634.9941,301.7716,632.2675,308.4473,639.4784,308.3966,642.205,301.7208" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="58" x="602.7854" y="327.1421">accounts</text><!--MD5=[be56d0a9749059aa4ed430bd0ac058c7]
+reverse link bank to account2--><path codeLine="62" d="M715.942,308.9338 C746.899,328.6848 788.396,355.1608 819.663,375.1098 " fill="none" id="bank-backto-account2" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="704.636,301.7208,707.5432,308.3199,714.7529,308.1744,711.8456,301.5753,704.636,301.7208" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="58" x="694.3756" y="324.5332">accounts</text><!--MD5=[832409bae6177443c285fb41b454d3f0]
+reverse link bank to transaction1--><path codeLine="63" d="M663.15,314.7708 C652.91,347.4898 634.172,397.5428 606.5,434.2168 C589.182,457.1678 565.134,477.9586 543.504,494.1167 " fill="none" id="bank-backto-transaction1" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="667.02,301.8988,661.4618,306.493,663.5648,313.3906,669.123,308.7964,667.02,301.8988" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="79" x="603.2932" y="322.4862">transactions</text><!--MD5=[96f46dd5539d5aebe0dbb213be0adc9b]
+reverse link bank to transaction2--><path codeLine="64" d="M687.599,313.6478 C709.336,360.3338 749.269,446.1038 771.497,493.8461 " fill="none" id="bank-backto-transaction2" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="682.107,301.8508,681.0132,308.9785,687.1719,312.7295,688.2657,305.6019,682.107,301.8508" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="79" x="670.6137" y="322.0908">transactions</text><!--MD5=[ce3b8f90e63c7db2981edc4d7f1404ac]
+link postgrestransactionlogger to bank--><path codeLine="65" d="M516.164,179.4708 C548.122,199.8608 595.082,229.8228 629.188,251.5828 " fill="none" id="postgrestransactionlogger-to-bank" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="640.221,258.6228,637.3138,252.0237,630.1041,252.1692,633.0114,258.7683,640.221,258.6228" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="116" x="636.6941" y="244.8612">transactionLogger</text><!--MD5=[86b3a4cc3a75b63546279ee4e8c35427]
+link logentry1 to postgrestransactionlogger--><path codeLine="66" d="M666.322,66.3378 C627.945,84.5908 578.414,108.1478 540.142,126.3508 " fill="none" id="logentry1-to-postgrestransactionlogger" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="528.14,132.0588,535.2765,133.0934,538.9763,126.9037,531.8398,125.8692,528.14,132.0588" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="26" x="511.0165" y="121.1685">logs</text><!--MD5=[f37303e1dad2e1fba9505af370ad0e8f]
+link logentry2 to postgrestransactionlogger--><path codeLine="67" d="M295.434,66.3378 C333.655,84.5908 382.984,108.1478 421.101,126.3508 " fill="none" id="logentry2-to-postgrestransactionlogger" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="433.054,132.0588,429.3637,125.8635,422.2256,126.8872,425.9159,133.0825,433.054,132.0588" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="26" x="391.5647" y="121.1685">logs</text><!--MD5=[58e008286c12d0097d0423aee3c90e78]
+link user1 to account1--><path codeLine="69" d="M495.107,315.3398 C494.519,329.7578 493.828,346.6888 493.209,361.8518 " fill="none" id="user1-to-account1" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="492.666,375.1578,496.9073,369.3259,493.1553,363.1678,488.914,368.9997,492.666,375.1578" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="28" x="461.8586" y="364.1804">user</text><!--MD5=[ab73a1bf8a12e97f8438a1514a772806]
+link user2 to account2--><path codeLine="70" d="M860.171,315.3398 C860.878,329.7578 861.707,346.6888 862.449,361.8518 " fill="none" id="user2-to-account2" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="863.101,375.1578,866.8028,368.9694,862.5142,363.1722,858.8124,369.3606,863.101,375.1578" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="28" x="831.7325" y="364.1804">user</text><!--MD5=[580d05a4d919fb89d529419f5e49264b]
+reverse link account1 to transaction1--><path codeLine="72" d="M491.5,447.6998 C491.5,462.8048 491.5,479.6516 491.5,494.0148 " fill="none" id="account1-backto-transaction1" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#FFFFFF" points="491.5,434.4378,487.5,440.4378,491.5,446.4378,495.5,440.4378,491.5,434.4378" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="79" x="404.7234" y="453.8887">transactions</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="55" x="431.4297" y="483.202">recipient</text><!--MD5=[070a4585f26396f1beebf1019d3b15e6]
+reverse link account1 to transaction2--><path codeLine="73" d="M572.731,439.3348 C613.926,456.3828 663.853,477.0451 705.197,494.1557 " fill="none" id="account1-backto-transaction2" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#FFFFFF" points="560.525,434.2828,564.5394,440.2731,571.613,438.8715,567.5986,432.8811,560.525,434.2828" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="79" x="582.9083" y="454.0534">transactions</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="44" x="641.3142" y="483.1027">sender</text><!--MD5=[653fe6dee926d68591aa57cc87b61d66]
+reverse link account2 to transaction2--><path codeLine="74" d="M839.268,445.8588 C829.483,461.4258 818.395,479.0654 808.998,494.0148 " fill="none" id="account2-backto-transaction2" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#FFFFFF" points="846.447,434.4378,839.8677,437.3896,840.062,444.5981,846.6413,441.6463,846.447,434.4378" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="79" x="756.1163" y="453.8887">transactions</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="55" x="752.8914" y="483.202">recipient</text><!--MD5=[a2e63dc142741a098f5d34b58fa30441]
+@startuml
+skinparam objectFontSize 20
+
+object bank
+
+object administrator {
+    email = "admin@bank.com"
+    password = "supersecretadminpassword"
+}
+
+object user1 {
+    email = "alice@foo.bar"
+    password = "password"
+    phoneNumber = "+37253123456"
+}
+
+object account1 {
+    IBAN = "EE471000001020145685"
+    balance = 90.0
+}
+
+object account2 {
+    IBAN = "EE471000001020132459"
+    balance = 10.0
+}
+
+object user2 {
+    email = "bob@bar.baz"
+    password = "qwerty"
+    phoneNumber = "+37253654321"
+}
+
+object transaction1 {
+    id = 417eacbe-52ef-4ceb-a8c3-fbcc177a0134
+    description = "Special operation"
+    sum = 100.0
+}
+
+object transaction2 {
+    id = ccac7c71-c32d-43a7-9d08-8e03f230214a
+    description = "Thanks!"
+    sum = 10.0
+}
+
+object postgrestransactionlogger {
+    connectionString = "postgresql://postgres:postgres@postgres:5432/transaction_logs"
+}
+
+object logentry1 {
+    dateTime = Tue Nov 16 04:50:19 PM EET 2021
+    description = "Transaction 417eacbe-52ef-4ceb-a8c3-fbcc177a0134 was created"
+}
+
+object logentry2 {
+    dateTime = Tue Nov 19 02:39:57 PM EET 2021
+    description = "Transaction ccac7c71-c32d-43a7-9d08-8e03f230214a was created"
+}
+
+bank "administrators" *-up- "bank" administrator
+bank "users" *-left- user1
+bank "users" *-right- user2
+bank "accounts" *-down- account1
+bank "accounts" *-down- account2
+bank "transactions" *- - transaction1
+bank "transactions" *- - transaction2
+bank "transactionLogger" *-up- postgrestransactionlogger
+postgrestransactionlogger "logs" *-up- logentry1
+postgrestransactionlogger "logs" *-up- logentry2
+
+account1 "user" *-up- user1
+account2 "user" *-up- user2
+
+account1 "transactions" o- - "recipient" transaction1
+account1 "transactions" o- - "sender" transaction2
+account2 "transactions" o- - "recipient" transaction2
+@enduml
+
+PlantUML version 1.2021.15beta6(Unknown compile time)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>
