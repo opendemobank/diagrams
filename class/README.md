@@ -2,9 +2,16 @@
 
 ## Final
 
+### Initial main
 ![](class.svg)
+
+### Domain
 ![](ClassDomain.svg)
+
+### Integration
 ![](ClassIntegration.svg)
+
+### Repository
 ![](ClassRepository.svg)
 
 ## Proposed diagrams
