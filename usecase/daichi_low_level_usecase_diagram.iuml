@@ -1,0 +1,31 @@
+@startuml
+
+title (Low level) UseCase Diagram
+
+rectangle "Banking System" {
+    (p2p payment) as p1
+    (Makeing transfer) as m1
+    (Editing Transaction) as t1
+    (Creating Transaction) as t2
+}
+
+:Customer1:
+:Customer2:
+:Administrator:
+:Database:
+
+Customer1 --> (p1)
+(p1) --> Customer2
+(p1) --> (t2)
+
+Customer1 --> (m1)
+(m1) --> Database : check
+(m1) --> (t2)
+
+Administrator --> t1
+Administrator --> t2
+t1 --> Database : As customer wants
+
+Customer1 ..> Administrator : ask 
+(t2) --> Database : store 
+@enduml
