@@ -60,7 +60,7 @@
 |||
 |---|---|
 | Persona: | A customer who opened an account a few days and not familiar with banking system.|
-| Photo: | <img src="https://pixabay.com/photos/grandma-old-age-old-woman-506341/" width="200"/>  |
+| Photo: | ![](images/MancalaPersonas/daichi_persona1.jpg) |
 | Fictional name: | Andrew Dorothy|
 | Job title: | Grandma lives in USA. |
 | Demographics: | - 72 years old <br> - Lives in Seattle in USA <br> - Her son helped her to create an account in the bank <br> - She likes sewing and making cookies |
@@ -72,7 +72,7 @@
 |||
 |---|---|
 | Persona: | A customer who often transfer his money with friends.|
-| Photo: | <img src="https://pixabay.com/photos/model-businessman-corporate-2911332/" width="200"/>  |
+| Photo: | ![](images/MancalaPersonas/daichi_persona2.jpg) |
 | Fictional name: | Yang Yang|
 | Job title: | Grandma lives in USA. |
 | Demographics: | - 21 years old <br> - Lives in New York in USA <br> - He is studying a sociology in bachelor's degree and he has many friends in a college. |
@@ -86,7 +86,7 @@
 |||
 |---|---|
 | Persona: | An administrator who loves her work. |
-| Photo: | <img src="https://pixabay.com/photos/dreadlocks-female-people-family-1169010/" width="200"/>  |
+| Photo: | ![](images/MancalaPersonas/daichi_persona3.jpg)  |
 | Fictional name: | Rashida Tanaka|
 | Job title: | Grandma lives in USA. |
 | Demographics: | - 28 years old. <br> - Her mother is from Azerbijan and her father is from Japan, and now lives in Estonia. <br> - Customer satisfaction to her job is very high. |
@@ -98,7 +98,7 @@
 |||
 |---|---|
 | Persona: | An administrator who is very talkative and sometimes talking too much with customers |
-| Photo: | <img src="https://pixabay.com/photos/man-laptop-work-smile-pose-office-6208470/" width="200"/>  |
+| Photo: | ![](images/MancalaPersonas/daichi_persona4.jpg)  |
 | Fictional name: | David Randorf |
 | Job title: | Grandma lives in USA. |
 | Demographics: | - 32 years old. <br> - He didn't expect to work at bank, but he enjoyes talking with customers more than he imagined and he makes great performance as a result. |
