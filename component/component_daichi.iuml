@@ -1,0 +1,30 @@
+@startuml
+interface User
+interface Admin
+
+cloud http {
+}
+
+node "Middle Tier" {
+    [Transaction Validator]
+    component [Front End]
+} 
+
+interface [Validated qurry]
+
+database "Database" {
+    [Log]
+    [Account]
+    [Transaction]
+}
+
+Admin -down-> http
+User -down-> http
+http -down-( [Front End]
+[Front End] -down-( [Transaction Validator]
+[Transaction Validator] -down-( [Validated qurry]
+[Validated qurry] -- [Log]
+[Validated qurry] -- [Account]
+[Validated qurry] -- [Transaction]
+
+@enduml

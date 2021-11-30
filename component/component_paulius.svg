@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="813px" preserveAspectRatio="none" style="width:502px;height:813px;background:#FFFFFF;" version="1.1" viewBox="0 0 502 813" width="502px" zoomAndPan="magnify"><defs><filter height="300%" id="fonmj7xp6vhvk" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[52e858d2fde199c9224597c32e5a829b]
+cluster <<Component>>\nInternal Payments System--><rect fill="#FFFFFF" filter="url(#fonmj7xp6vhvk)" height="371" style="stroke:#000000;stroke-width:1.5;" width="404" x="11.5" y="204"/><rect fill="#FFFFFF" height="10" style="stroke:#000000;stroke-width:1.5;" width="15" x="395.5" y="209"/><rect fill="#FFFFFF" height="2" style="stroke:#000000;stroke-width:1.5;" width="4" x="393.5" y="211"/><rect fill="#FFFFFF" height="2" style="stroke:#000000;stroke-width:1.5;" width="4" x="393.5" y="215"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="136" x="145.5" y="229.9951">&lt;&lt;Component&gt;&gt;</text><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="214" x="106.5" y="246.292">Internal Payments System</text><!--MD5=[6208ec3a5c6eed3382019a0268a70113]
+entity integration--><rect fill="#F4A460" filter="url(#fonmj7xp6vhvk)" height="62.5938" style="stroke:#A80036;stroke-width:1.5;" width="142" x="257.5" y="255"/><rect fill="#F4A460" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="379.5" y="260"/><rect fill="#F4A460" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="377.5" y="262"/><rect fill="#F4A460" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="377.5" y="266"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="102" x="272.5" y="287.9951">«Component»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="81" x="272.5" y="304.292">Integration</text><!--MD5=[b8262ed2d8d5d5cbd1d495d0ef5720ab]
+entity access--><rect fill="#FFFAFA" filter="url(#fonmj7xp6vhvk)" height="62.5938" style="stroke:#A80036;stroke-width:1.5;" width="142" x="27.5" y="255"/><rect fill="#FFFAFA" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="149.5" y="260"/><rect fill="#FFFAFA" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="147.5" y="262"/><rect fill="#FFFAFA" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="147.5" y="266"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="102" x="42.5" y="287.9951">«Component»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="49" x="42.5" y="304.292">Access</text><!--MD5=[24b005fcbd1feaad7f7dedc55a678d14]
+entity repository--><rect fill="#87CEEB" filter="url(#fonmj7xp6vhvk)" height="62.5938" style="stroke:#A80036;stroke-width:1.5;" width="142" x="27.5" y="496"/><rect fill="#87CEEB" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="149.5" y="501"/><rect fill="#87CEEB" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="147.5" y="503"/><rect fill="#87CEEB" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="147.5" y="507"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="102" x="42.5" y="528.9951">«Component»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="79" x="42.5" y="545.292">Repository</text><!--MD5=[8890788e37b11dd3053f547e2b5ce265]
+entity domain--><rect fill="#FFD700" filter="url(#fonmj7xp6vhvk)" height="62.5938" style="stroke:#A80036;stroke-width:1.5;" width="142" x="257.5" y="496"/><rect fill="#FFD700" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="379.5" y="501"/><rect fill="#FFD700" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="377.5" y="503"/><rect fill="#FFD700" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="377.5" y="507"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="102" x="272.5" y="528.9951">«Component»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="55" x="272.5" y="545.292">Domain</text><!--MD5=[c2d62954d03057a959ef9e62302bd759]
+entity interface1--><ellipse cx="213.5" cy="286.5" fill="#FEFECE" filter="url(#fonmj7xp6vhvk)" rx="8" ry="8" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="73" x="177" y="316.4951">interfaces</text><!--MD5=[d5927fd414f960942336f1951b792b2f]
+entity interface2--><ellipse cx="336.5" cy="407" fill="#FEFECE" filter="url(#fonmj7xp6vhvk)" rx="8" ry="8" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="73" x="300" y="436.9951">interfaces</text><!--MD5=[a4e72da86cafff7d218d56d799434639]
+entity interface3--><ellipse cx="213.5" cy="527.5" fill="#FEFECE" filter="url(#fonmj7xp6vhvk)" rx="8" ry="8" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="73" x="177" y="557.4951">interfaces</text><!--MD5=[4b169e1931bfa9d5d9348e43b182d351]
+entity interface4--><ellipse cx="90.5" cy="407" fill="#FEFECE" filter="url(#fonmj7xp6vhvk)" rx="8" ry="8" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="73" x="54" y="436.9951">interfaces</text><!--MD5=[937ee0649141d2edf7ba1085b9a83751]
+entity interface5--><ellipse cx="213.5" cy="407" fill="#FEFECE" filter="url(#fonmj7xp6vhvk)" rx="8" ry="8" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="73" x="177" y="436.9951">interfaces</text><!--MD5=[9d5d8f7b7fc5fdf144b813412fbdebc4]
+entity webClient--><rect fill="#FEFECE" filter="url(#fonmj7xp6vhvk)" height="62.5938" style="stroke:#A80036;stroke-width:1.5;" width="142" x="169.5" y="7"/><rect fill="#FEFECE" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="291.5" y="12"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="289.5" y="14"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="289.5" y="18"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="102" x="184.5" y="39.9951">«Component»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="78" x="184.5" y="56.292">Web client</text><!--MD5=[6a6675a830db1f8ebc8eb3cbda5116b6]
+entity adminClient--><rect fill="#FEFECE" filter="url(#fonmj7xp6vhvk)" height="62.5938" style="stroke:#A80036;stroke-width:1.5;" width="142" x="346.5" y="7"/><rect fill="#FEFECE" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="468.5" y="12"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="466.5" y="14"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="466.5" y="18"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="102" x="361.5" y="39.9951">«Component»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="91" x="361.5" y="56.292">Admin client</text><!--MD5=[fcd7b9b58b982891a4c065296d4ac5c8]
+entity http--><ellipse cx="328.5" cy="159" fill="#FEFECE" filter="url(#fonmj7xp6vhvk)" rx="8" ry="8" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="33" x="312" y="188.9951">http</text><!--MD5=[78fe2ab0f1a7914345b9fc7411b8e1b8]
+entity paymentsDatabase--><rect fill="#FEFECE" filter="url(#fonmj7xp6vhvk)" height="62.5938" style="stroke:#A80036;stroke-width:1.5;" width="183" x="7" y="737"/><rect fill="#FEFECE" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="170" y="742"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="168" y="744"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="168" y="748"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="102" x="22" y="769.9951">«Component»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="143" x="22" y="786.292">Payments Database</text><!--MD5=[c92a21d1aee3df099fe4d5eb8e77118d]
+entity jdbc--><ellipse cx="98.5" cy="648" fill="#FEFECE" filter="url(#fonmj7xp6vhvk)" rx="8" ry="8" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="31" x="83" y="677.9951">jdbc</text><!--MD5=[fda4153041f11a70133acf48f5e025d0]
+link access to interface1--><path d="M169.926,286.5 C181.387,286.5 192.848,286.5 204.309,286.5 " fill="none" id="access-interface1" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[836592e5387a19135ed0a3ec353b06a9]
+reverse link interface1 to integration--><path d="M228.014,286.5 C237.729,286.5 247.445,286.5 257.16,286.5 " fill="none" id="interface1-backto-integration" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="222.934,286.5,231.934,290.5,227.934,286.5,231.934,282.5,222.934,286.5" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[da05a4870ace8c217d06cd5b1ba3ddd5]
+link interface2 to domain--><path d="M335.95,416.145 C334.859,432.303 332.372,469.152 330.57,495.833 " fill="none" id="interface2-domain" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[b37e9f4e59a5ab37daa9f0aa5e384443]
+link integration to interface2--><path d="M330.56,318.017 C332.188,342.13 334.382,374.62 335.596,392.608 " fill="none" id="integration-to-interface2" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="335.94,397.7,339.324,388.4508,335.6029,392.7114,331.3422,388.9902,335.94,397.7" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[db62c0b0facd019f14a10b9cfe53bacf]
+link interface3 to domain--><path d="M222.934,527.5 C234.342,527.5 245.751,527.5 257.16,527.5 " fill="none" id="interface3-domain" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[0bc6e689a5f3ad03a9803c36e4fe29f5]
+link repository to interface3--><path d="M169.926,527.5 C179.685,527.5 189.445,527.5 199.205,527.5 " fill="none" id="repository-to-interface3" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="204.309,527.5,195.309,523.5,199.309,527.5,195.309,531.5,204.309,527.5" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[10fc72eaaa22bb3d39f15bf471d8a203]
+link access to interface4--><path d="M96.44,318.017 C94.6435,344.624 92.1586,381.432 91.0604,397.7 " fill="none" id="access-interface4" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[ea8fef820e97af1fd90b280a9238dd7e]
+reverse link interface4 to repository--><path d="M91.3918,421.209 C92.6011,439.123 94.7973,471.654 96.43,495.833 " fill="none" id="interface4-backto-repository" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="91.0499,416.145,87.6658,425.3942,91.387,421.1336,95.6476,424.8548,91.0499,416.145" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[29e47e31adca5262b97e92d2f25bc798]
+link access to interface5--><path d="M128.115,318.017 C153.937,344.624 189.657,381.432 205.445,397.7 " fill="none" id="access-interface5" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[8b4ea11797ce3aaec13812c0d4682422]
+reverse link interface5 to domain--><path d="M224.999,419.849 C242.065,437.434 274.667,471.028 298.739,495.833 " fill="none" id="interface5-backto-domain" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="221.404,416.145,224.8036,425.3885,224.887,419.7323,230.5432,419.8157,221.404,416.145" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[566f74efdc87d3172c80eb5f868cb0cd]
+link http to integration--><path d="M328.5,168.234 C328.5,185.521 328.5,226.354 328.5,254.95 " fill="none" id="http-integration" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[245f810c8624c5e45a4df245afa31552]
+link webClient to http--><path d="M263.162,70.017 C281.378,94.545 306.03,127.743 319.236,145.525 " fill="none" id="webClient-to-http" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="322.336,149.7,320.181,140.0898,319.3548,145.686,313.7586,144.8598,322.336,149.7" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[96cb35f51b79cc7668288f002ce46e1b]
+link adminClient to http--><path d="M394.58,70.017 C376.158,94.545 351.225,127.743 337.869,145.525 " fill="none" id="adminClient-to-http" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="334.734,149.7,343.337,144.9054,337.7365,145.7019,336.94,140.1014,334.734,149.7" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[cd32f53a4e4eb17ef4b919d373d7702d]
+link repository to jdbc--><path d="M98.5,559.017 C98.5,583.13 98.5,615.62 98.5,633.608 " fill="none" id="repository-to-jdbc" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="98.5,638.7,102.5,629.7,98.5,633.7,94.5,629.7,98.5,638.7" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[0c094cef4144eb792cf9067188e2f0af]
+link jdbc to paymentsDatabase--><path d="M98.5,657.145 C98.5,673.303 98.5,710.1522 98.5,736.8328 " fill="none" id="jdbc-paymentsDatabase" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[70874e223eb7a0ff85944059cc057b4d]
+@startuml
+component "<<Component>>\nWeb client" as webClient
+component "<<Component>>\nAdmin client" as adminClient
+
+component "<<Component>>\nInternal Payments System" {
+    component "<<Component>>\nIntegration" as integration #SandyBrown
+    component "<<Component>>\nAccess" as access #Snow
+    component "<<Component>>\nRepository" as repository #SkyBlue
+    component "<<Component>>\nDomain" as domain #Gold
+
+    () "interfaces" as  interface1
+    () "interfaces" as  interface2
+    () "interfaces" as  interface3
+    () "interfaces" as  interface4
+    () "interfaces" as  interface5
+
+    access -right- interface1
+    interface1 <. integration
+
+    domain -up- interface2
+    integration ..> interface2
+
+    domain -left- interface3
+    repository .> interface3
+
+    access -down- interface4
+    interface4 <.. repository
+
+    access -down- interface5
+    interface5 <.. domain
+}
+
+integration -up- http
+webClient ..> http
+adminClient ..> http
+
+component "<<Component>>\nPayments Database" as paymentsDatabase
+
+repository ..> jdbc
+jdbc - - paymentsDatabase
+@enduml
+
+PlantUML version 1.2021.15beta6(Unknown compile time)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

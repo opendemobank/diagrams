@@ -1,0 +1,78 @@
+@startuml
+
+skinparam objectFontSize 20
+
+object bank
+
+object administrator {
+    email = "admin@bank.com"
+    password = "supersecretadminpassword"
+}
+
+object user1 {
+    email = "alice@foo.bar"
+    password = "password"
+    phoneNumber = "+37253123456"
+}
+
+object account1 {
+    IBAN = "EE471000001020145685"
+    balance = 90.0
+}
+
+object account2 {
+    IBAN = "EE471000001020132459"
+    balance = 10.0
+}
+
+object user2 {
+    email = "bob@bar.baz"
+    password = "qwerty"
+    phoneNumber = "+37253654321"
+}
+
+object transaction1 {
+    id = 417eacbe-52ef-4ceb-a8c3-fbcc177a0134
+    description = "Special operation"
+    sum = 100.0
+}
+
+object transaction2 {
+    id = ccac7c71-c32d-43a7-9d08-8e03f230214a
+    description = "Thanks!"
+    sum = 10.0
+}
+
+object postgrestransactionlogger {
+    connectionString = "postgresql://postgres:postgres@postgres:5432/transaction_logs"
+}
+
+object logentry1 {
+    dateTime = Tue Nov 16 04:50:19 PM EET 2021
+    description = "Transaction 417eacbe-52ef-4ceb-a8c3-fbcc177a0134 was created"
+}
+
+object logentry2 {
+    dateTime = Tue Nov 19 02:39:57 PM EET 2021
+    description = "Transaction ccac7c71-c32d-43a7-9d08-8e03f230214a was created"
+}
+
+bank "administrators" *-up- "bank" administrator
+bank "users" *-left- user1
+bank "users" *-right- user2
+bank "accounts" *-down- account1
+bank "accounts" *-down- account2
+bank "transactions" *-- transaction1
+bank "transactions" *-- transaction2
+bank "transactionLogger" *-up- postgrestransactionlogger
+postgrestransactionlogger "logs" *-up- logentry1
+postgrestransactionlogger "logs" *-up- logentry2
+
+account1 "user" *-up- user1
+account2 "user" *-up- user2
+
+account1 "transactions" o-- "recipient" transaction1
+account1 "transactions" o-- "sender" transaction2
+account2 "transactions" o-- "recipient" transaction2
+
+@enduml

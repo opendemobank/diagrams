@@ -1,0 +1,32 @@
+@startuml
+object customer{
+    first_name = Trump
+    last_name = Donald
+    password = hello
+    name = Bob
+}
+
+object bank{
+    name = lhv
+} 
+
+object account{
+    balance = 300
+    type = regular
+    id = 5678
+}
+
+object transaction{
+    id = 1234
+    type = withdraw
+}
+
+
+customer -- account : has many
+bank -- account : has many
+account -- transaction : creates
+Admin -- bank : controls
+withdraw --|> transaction
+transfer --|> transaction
+add --|> transaction
+@enduml

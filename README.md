@@ -10,22 +10,20 @@
 - [ ] [Stories](stories)
 - [ ] [Usecase diagrams](usecase)
 - [ ] [Userstories](userstories)
+- [ ] [Wireframes](wireframes)
 
 ## Component diagram
 
-![](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/opendemobank/diagrams/main/component/component.iuml)
+![](component/component.svg)
 
 ## Class diagram
 
-![](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/opendemobank/diagrams/main/class/class.iuml)
+![](class/class.svg)
 
 ## Object diagram
 
-![](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/opendemobank/diagrams/main/object/object.iuml)
+![](object/object.svg)
 
-## Embedded PlantUML demo
+## Wireframes
 
-`![](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/opendemobank/diagrams/main/demo.iuml)`
-
-![](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/opendemobank/diagrams/main/demo.iuml)
-
+![](wireframes/userMoneyTransfer.png)

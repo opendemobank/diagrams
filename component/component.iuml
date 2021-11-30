@@ -1,50 +1,42 @@
-@startuml
+@startuml Component
 
-[Admin panel] as admin
-[Web client] as web
+component "<<Component>>\nWeb client" as webClient
+component "<<Component>>\nAdmin client" as adminClient
 
-package "REST API" {
-    [Access Manager] as access
-    [Transaction Handler] as handler
-    [Transaction Logger] as logger
-    
-    () "Public methods" as methods1
-    () "Public methods" as methods2
+component "<<Component>>\nInternal Payments System" {
+    component "<<Component>>\nIntegration" as integration #SandyBrown
+    component "<<Component>>\nAccess" as access #Snow
+    component "<<Component>>\nRepository" as repository #SkyBlue
+    component "<<Component>>\nDomain" as domain #Gold
+
+    () "interfaces" as  interface1
+    () "interfaces" as  interface2
+    () "interfaces" as  interface3
+    () "interfaces" as  interface4
+    () "interfaces" as  interface5
+
+    access -right- interface1
+    interface1 <. integration
+
+    domain -up- interface2
+    integration ..> interface2
+
+    domain -left- interface3
+    repository .> interface3
+
+    access -down- interface4
+    interface4 <.. repository
+
+    access -down- interface5
+    interface5 <.. domain
 }
 
-database "SQL database" {
-    [User table] as users
-    [Administrator table] as administrators
-    [Transaction table] as transactions
-}
+integration -up- http
+webClient ..> http
+adminClient ..> http
 
-database "Persistent storage" {
-    [Transaction logs] as logs
-}
+component "<<Component>>\nPayments Database" as paymentsDatabase
 
-() "JDBC" as jdbc1
-() "JDBC" as jdbc2
-() "API" as api
-() "HTTP" as http
-
-handler -up- http
-admin ..> http : use
-web ..> http : use
-
-access -right- methods1
-handler .left.> methods1 : use
-logger -left- methods2
-handler .right.> methods2 : use
-
-handler ..> jdbc1 : use
-jdbc1 -- transactions
-
-access ..> jdbc2 : use
-jdbc2 -- users
-jdbc2 -- administrators
-
-
-logger ..> api : use
-api -- logs
-
+repository ..> jdbc
+jdbc -- paymentsDatabase
 @enduml

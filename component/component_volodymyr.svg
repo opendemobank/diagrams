@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="619px" preserveAspectRatio="none" style="width:886px;height:619px;background:#FFFFFF;" version="1.1" viewBox="0 0 886 619" width="886px" zoomAndPan="magnify"><defs><filter height="300%" id="fl74hcujgi6bu" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[045599ce58c7e5c7d48c5f534dab8ee6]
+cluster REST API--><polygon fill="#FFFFFF" filter="url(#fl74hcujgi6bu)" points="97,235,175,235,182,257.2969,869,257.2969,869,332,97,332,97,235" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="97" x2="182" y1="257.2969" y2="257.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="72" x="101" y="249.9951">REST API</text><!--MD5=[4eead8a0fd9c1bca3daebb6b2e75a588]
+cluster SQL database--><path d="M6,510 C6,500 288,500 288,500 C288,500 570,500 570,510 L570,602 C570,612 288,612 288,612 C288,612 6,612 6,602 L6,510 " fill="#FFFFFF" filter="url(#fl74hcujgi6bu)" style="stroke:#000000;stroke-width:1.5;"/><path d="M6,510 C6,520 288,520 288,520 C288,520 570,520 570,510 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="112" x="232" y="534.9951">SQL database</text><!--MD5=[c2d6f7a647618ba366a6672f19fb3d68]
+cluster Persistent storage--><path d="M669,510 C669,500 764,500 764,500 C764,500 859,500 859,510 L859,602 C859,612 764,612 764,612 C764,612 669,612 669,602 L669,510 " fill="#FFFFFF" filter="url(#fl74hcujgi6bu)" style="stroke:#000000;stroke-width:1.5;"/><path d="M669,510 C669,520 764,520 764,520 C764,520 859,520 859,510 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="152" x="688" y="534.9951">Persistent storage</text><!--MD5=[b8262ed2d8d5d5cbd1d495d0ef5720ab]
+entity access--><rect fill="#FEFECE" filter="url(#fl74hcujgi6bu)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="154" x="113" y="270"/><rect fill="#FEFECE" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="247" y="275"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="245" y="277"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="245" y="281"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="114" x="128" y="302.9951">Access Manager</text><!--MD5=[1c4b8bd9ff4ef10665559e35a9e12a83]
+entity handler--><rect fill="#FEFECE" filter="url(#fl74hcujgi6bu)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="183" x="379.5" y="270"/><rect fill="#FEFECE" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="542.5" y="275"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="540.5" y="277"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="540.5" y="281"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="143" x="394.5" y="302.9951">Transaction Handler</text><!--MD5=[d7a01c17c4163d10b2c6131af23a7c66]
+entity logger--><rect fill="#FEFECE" filter="url(#fl74hcujgi6bu)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="178" x="675" y="270"/><rect fill="#FEFECE" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="833" y="275"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="831" y="277"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="831" y="281"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="138" x="690" y="302.9951">Transaction Logger</text><!--MD5=[fcea201e8761d40f4636a5478c8b2361]
+entity methods1--><ellipse cx="311" cy="293" fill="#FEFECE" filter="url(#fl74hcujgi6bu)" rx="8" ry="8" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="111" x="255.5" y="322.9951">Public methods</text><!--MD5=[844460ef109fea32bce39aa474331e41]
+entity methods2--><ellipse cx="631" cy="293" fill="#FEFECE" filter="url(#fl74hcujgi6bu)" rx="8" ry="8" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="111" x="575.5" y="322.9951">Public methods</text><!--MD5=[5f2f9dbbee692058d60489180693f774]
+entity users--><rect fill="#FEFECE" filter="url(#fl74hcujgi6bu)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="113" x="22.5" y="550"/><rect fill="#FEFECE" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="115.5" y="555"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="113.5" y="557"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="113.5" y="561"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="73" x="37.5" y="582.9951">User table</text><!--MD5=[b888dc13b966257ce8291554ac93ec31]
+entity administrators--><rect fill="#FEFECE" filter="url(#fl74hcujgi6bu)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="182" x="171" y="550"/><rect fill="#FEFECE" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="333" y="555"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="331" y="557"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="331" y="561"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="142" x="186" y="582.9951">Administrator table</text><!--MD5=[81ef5857432058c011103b38a0dd9266]
+entity transactions--><rect fill="#FEFECE" filter="url(#fl74hcujgi6bu)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="166" x="388" y="550"/><rect fill="#FEFECE" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="534" y="555"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="532" y="557"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="532" y="561"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="126" x="403" y="582.9951">Transaction table</text><!--MD5=[5939ead6c52284c5685e8f12707b4421]
+entity logs--><rect fill="#FEFECE" filter="url(#fl74hcujgi6bu)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="157" x="685.5" y="550"/><rect fill="#FEFECE" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="822.5" y="555"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="820.5" y="557"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="820.5" y="561"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="117" x="700.5" y="582.9951">Transaction logs</text><!--MD5=[79a439086b036a57b90a01d7b2f8bbd1]
+entity admin--><rect fill="#FEFECE" filter="url(#fl74hcujgi6bu)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="130" x="327" y="7"/><rect fill="#FEFECE" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="437" y="12"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="435" y="14"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="435" y="18"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="90" x="342" y="39.9951">Admin panel</text><!--MD5=[08af8945a84acfe1eabc0963aa87c412]
+entity web--><rect fill="#FEFECE" filter="url(#fl74hcujgi6bu)" height="46.2969" style="stroke:#A80036;stroke-width:1.5;" width="118" x="492" y="7"/><rect fill="#FEFECE" height="10" style="stroke:#A80036;stroke-width:1.5;" width="15" x="590" y="12"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="588" y="14"/><rect fill="#FEFECE" height="2" style="stroke:#A80036;stroke-width:1.5;" width="4" x="588" y="18"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="78" x="507" y="39.9951">Web client</text><!--MD5=[34ea87eb9d48dab6ce7527b74a95458b]
+entity jdbc1--><ellipse cx="471" cy="424" fill="#FEFECE" filter="url(#fl74hcujgi6bu)" rx="8" ry="8" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="35" x="453.5" y="453.9951">JDBC</text><!--MD5=[8a3b069ba7201127646786b299fd6358]
+entity jdbc2--><ellipse cx="190" cy="424" fill="#FEFECE" filter="url(#fl74hcujgi6bu)" rx="8" ry="8" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="35" x="172.5" y="453.9951">JDBC</text><!--MD5=[e2307af040e3f87d22824e7603ca28ec]
+entity api--><ellipse cx="764" cy="424" fill="#FEFECE" filter="url(#fl74hcujgi6bu)" rx="8" ry="8" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="23" x="752.5" y="453.9951">API</text><!--MD5=[fcd7b9b58b982891a4c065296d4ac5c8]
+entity http--><ellipse cx="471" cy="159" fill="#FEFECE" filter="url(#fl74hcujgi6bu)" rx="8" ry="8" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="37" x="452.5" y="188.9951">HTTP</text><!--MD5=[7d4338e94fd04d1b424cfc8e08f23e69]
+link http to handler--><path d="M471,168.257 C471,188.294 471,240.034 471,269.882 " fill="none" id="http-handler" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[b03c23733a9bb81ba817d34417ec04ab]
+link admin to http--><path d="M405.761,53.122 C422.365,79.814 449.716,123.784 463.111,145.318 " fill="none" id="admin-to-http" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="465.9,149.802,464.5445,140.0469,463.2598,145.5559,457.7507,144.2712,465.9,149.802" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23" x="435" y="96.0669">use</text><!--MD5=[5e3328632e66ffb3949be0103804e540]
+link web to http--><path d="M537.065,53.122 C520.251,79.814 492.554,123.784 478.989,145.318 " fill="none" id="web-to-http" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="476.164,149.802,484.3465,144.3205,478.8298,145.5719,477.5783,140.0552,476.164,149.802" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23" x="520" y="96.0669">use</text><!--MD5=[0eb722bac9f95798dbc88b35a309abc1]
+link access to methods1--><path d="M267.043,293 C278.605,293 290.166,293 301.728,293 " fill="none" id="access-methods1" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[84b67de265305d45bf783ede0164e970]
+reverse link methods1 to handler--><path d="M325.078,293 C337.865,293 357.918,293 379.11,293 " fill="none" id="methods1-backto-handler" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="320.061,293,329.061,297,325.061,293,329.061,289,320.061,293" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23" x="338.25" y="286.0669">use</text><!--MD5=[5b63eaba54baf5bef12309ff1d062c6b]
+link methods2 to logger--><path d="M640.092,293 C651.708,293 663.325,293 674.941,293 " fill="none" id="methods2-logger" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[4efb9c4e91100f6a153a6c284f65e02e]
+link handler to methods2--><path d="M562.681,293 C583.943,293 604.079,293 616.908,293 " fill="none" id="handler-to-methods2" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="621.941,293,612.941,289,616.941,293,612.941,297,621.941,293" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23" x="580.75" y="286.0669">use</text><!--MD5=[2f836be1e39d564c238c2f200b952584]
+link handler to jdbc1--><path d="M471,316.176 C471,343.138 471,387.766 471,409.824 " fill="none" id="handler-to-jdbc1" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="471,414.921,475,405.921,471,409.921,467,405.921,471,414.921" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23" x="472" y="361.0669">use</text><!--MD5=[83cb92dd77b39251bcaacbd7265b126e]
+link jdbc1 to transactions--><path d="M471,433.325 C471,455.493 471,516.531 471,549.7525 " fill="none" id="jdbc1-transactions" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[a916c4ba66d7e1d6643477841158c01e]
+link access to jdbc2--><path d="M190,316.176 C190,343.138 190,387.766 190,409.824 " fill="none" id="access-to-jdbc2" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="190,414.921,194,405.921,190,409.921,186,405.921,190,414.921" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23" x="191" y="361.0669">use</text><!--MD5=[42338f190d3766333540c978f2d2d613]
+link jdbc2 to users--><path d="M183.714,433.325 C166.974,455.493 120.885,516.531 95.799,549.7525 " fill="none" id="jdbc2-users" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[94545febb5d28852d0e444ff86a043e1]
+link jdbc2 to administrators--><path d="M194.077,433.325 C204.935,455.493 234.831,516.531 251.103,549.7525 " fill="none" id="jdbc2-administrators" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[fee75bcdbc57c2b16ee76b786f68cf95]
+link logger to api--><path d="M764,316.176 C764,343.138 764,387.766 764,409.824 " fill="none" id="logger-to-api" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="764,414.921,768,405.921,764,409.921,760,405.921,764,414.921" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23" x="765" y="361.0669">use</text><!--MD5=[170ace0af7050da81fbc505cec7d0347]
+link api to logs--><path d="M764,433.325 C764,455.493 764,516.531 764,549.7525 " fill="none" id="api-logs" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[1e5e131430b4309fa8069cfe7342a8d7]
+@startuml
+[Admin panel] as admin
+[Web client] as web
+
+package "REST API" {
+    [Access Manager] as access
+    [Transaction Handler] as handler
+    [Transaction Logger] as logger
+    
+    () "Public methods" as methods1
+    () "Public methods" as methods2
+}
+
+database "SQL database" {
+    [User table] as users
+    [Administrator table] as administrators
+    [Transaction table] as transactions
+}
+
+database "Persistent storage" {
+    [Transaction logs] as logs
+}
+
+() "JDBC" as jdbc1
+() "JDBC" as jdbc2
+() "API" as api
+() "HTTP" as http
+
+handler -up- http
+admin ..> http : use
+web ..> http : use
+
+access -right- methods1
+handler .left.> methods1 : use
+logger -left- methods2
+handler .right.> methods2 : use
+
+handler ..> jdbc1 : use
+jdbc1 - - transactions
+
+access ..> jdbc2 : use
+jdbc2 - - users
+jdbc2 - - administrators
+
+
+logger ..> api : use
+api - - logs
+@enduml
+
+PlantUML version 1.2021.15beta6(Unknown compile time)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

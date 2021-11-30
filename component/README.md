@@ -1,5 +1,28 @@
 # Component Diagrams
 
-![](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/opendemobank/diagrams/main/component/component.iuml)
+## Final
 
-![](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/opendemobank/diagrams/main/component/component_Paulius.iuml)
+![](component.svg)
+
+## Proposed diagrams
+
+### Volodymyr
+
+![](component_volodymyr.svg)
+
+### Paulius
+
+![](component_paulius.svg)
+
+### Lana
+
+![](component_lana.png)
+
+### Carolin
+
+![](component_carolin.png)
+
+### Daichi
+
+![](component_daichi.png)
+
