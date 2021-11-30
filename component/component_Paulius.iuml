@@ -27,8 +27,8 @@ component "<<Component>>\nInternal Payments System" {
     access -down- interface4
     interface4 <.. repository
 
-    access -down- interface5
-    interface5 <.. domain
+    integration ..> interface5
+    interface5 -down- repository
 }
 
 integration -up- http

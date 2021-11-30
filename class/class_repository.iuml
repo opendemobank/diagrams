@@ -1,0 +1,96 @@
+@startuml ClassRepository
+
+skinparam class {
+    BackgroundColor<<Repository>> SkyBlue
+    BorderColor<<Repository>> Navy
+    BackgroundColor<<Access>> Snow
+    BorderColor<<Access>> Plum
+    BackgroundColor<<Integration>> SandyBrown
+    BorderColor<<Integration>> Tomato
+    BackgroundColor<<Domain>> Gold
+    BorderColor<<Domain>> Red
+}
+
+component "<<Component>>\nRepository" as repository #SkyBlue {
+    interface UsersRepo {
+        + User findById(long id)
+    }
+
+    interface CustomersRepo {
+        + Customer findById(long id)
+    }
+
+    interface AccountsRepo {
+        + Account findById(long id)
+        + List<Account> findByCustomerId(long id)
+    }
+
+    interface TransactionsRepo {
+        + Account findById(long id)
+    }
+
+    interface TransactionsLogRepo {
+        + Account findById(long id)
+    }
+}
+
+component "<<Component>>\nDomain" as domain #Gold {
+    interface IUsersRepo
+    class User
+    interface ICustomersRepo
+    class Customer
+    interface IAccountsRepo
+    class Account
+    interface ITransactionsRepo
+    class Transaction
+    interface ITransactionsLogRepo
+}
+
+interface org.springframework.data.jpa.repository.JpaRepository
+
+UsersRepo -|> IUsersRepo
+UsersRepo --> User
+UsersRepo ---[hidden]> CustomersRepo
+
+CustomersRepo -|> ICustomersRepo
+CustomersRepo --> Customer
+CustomersRepo ---[hidden]> AccountsRepo
+
+AccountsRepo -|> IAccountsRepo
+AccountsRepo --> Account
+AccountsRepo ---[hidden]> TransactionsRepo
+
+TransactionsRepo -|> ITransactionsRepo
+TransactionsRepo --> Transaction
+TransactionsRepo ---[hidden]> TransactionsLogRepo
+
+TransactionsLogRepo -|> ITransactionsLogRepo
+TransactionsLogRepo -up-> Transaction
+
+IUsersRepo --[hidden]> User
+User --[hidden]> ICustomersRepo
+ICustomersRepo --[hidden]> Customer
+Customer --[hidden]> IAccountsRepo
+IAccountsRepo --[hidden]> Account
+Account --[hidden]> ITransactionsRepo
+ITransactionsRepo --[hidden]> Transaction
+Transaction --[hidden]> ITransactionsLogRepo
+
+org.springframework.data.jpa.repository.JpaRepository <|- UsersRepo
+org.springframework.data.jpa.repository.JpaRepository <|--- CustomersRepo
+org.springframework.data.jpa.repository.JpaRepository <|----- AccountsRepo
+
+note as note1
+    TODO: add new methods.
+end note
+
+note as note2
+    Idea here is to invert dependencies that
+    Domain layer would not know anything about Repository layer,
+    in this case Spring JPA magic.
+end note
+
+UsersRepo -up- note1
+UsersRepo -up- note2
+
+@enduml

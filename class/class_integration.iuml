@@ -1,0 +1,114 @@
+@startuml ClassIntegration
+
+skinparam class {
+    BackgroundColor<<Repository>> SkyBlue
+    BorderColor<<Repository>> Navy
+    BackgroundColor<<Access>> Snow
+    BorderColor<<Access>> Plum
+    BackgroundColor<<Integration>> SandyBrown
+    BorderColor<<Integration>> Tomato
+    BackgroundColor<<Domain>> Gold
+    BorderColor<<Domain>> Red
+}
+
+component "<<Component>>\nIntegration" as integration #SandyBrown {
+    abstract Controller {
+
+    }
+    
+    class UserController {
+        + ResponseEntity<User> getUserById(User currentUser, long id)
+        + ResponseEntity<List<User>> getAll(User currentUser)
+        + ResponseEntity<User> addAdmin(User currentUser, Administrator user)
+        + String login(String email, String password)
+        + User getCurrent(User currentUser)
+        + boolean logout(User currentUser)
+    }
+
+    class CustomerController {
+        + ResponseEntity<Customer> getCustomerById(User currentUser, long id)
+        + ResponseEntity<List<Customer>> getAll(User currentUser)
+        + ResponseEntity<Customer> createCustomer(User currentUser, Customer customer)
+    }
+
+    class AccountController {
+        + ResponseEntity<Account> getAccountById(User currentUser, long id)
+        + ResponseEntity<List<Account>> getAll(User currentUser)
+        + ResponseEntity<List<Account>> getAccountsByCustomerId(User currentUser, long id)
+        + ResponseEntity<List<Account>> getCustomerAccounts(User currentUser)
+    }
+
+    class TransactionController {
+    }
+
+    class TransferController {
+    }
+}
+
+component "<<Component>>\nDomain" as domain #Gold {
+    class User
+    enum Role
+    class UserManager
+    class CustomerManager
+    class Customer
+    class AccountManager
+    class Account
+    class TransactionManager
+    class Transaction
+    class TransferManager
+    class Transfer
+}
+
+Controller -> User
+Controller --> Role
+Controller ---[hidden]> UserController
+
+UserController ->  UserManager
+UserController ---[hidden]> CustomerController
+
+CustomerController ->  CustomerManager
+CustomerController --> Customer
+CustomerController ---[hidden]> AccountController
+
+AccountController -> AccountManager
+AccountController --> Account
+AccountController ---[hidden]> TransactionController
+
+TransactionController -> TransactionManager
+TransactionController --> Transaction
+TransactionController ---[hidden]> TransferController
+
+TransferController -> TransferManager
+TransferController --> Transfer
+
+Controller <|-- UserController
+Controller <|---- CustomerController
+Controller <|------ AccountController
+Controller <|-------- TransactionController
+Controller <|---------- TransferController
+
+User --[hidden]> Role
+Role --[hidden]> UserManager
+UserManager ---[hidden]> CustomerManager
+CustomerManager --[hidden]> Customer
+Customer --[hidden]> AccountManager
+AccountManager --[hidden]> Account
+Account --[hidden]> TransactionManager
+TransactionManager --[hidden]> Transaction
+Transaction --[hidden]> TransferManager
+TransferManager --[hidden]> Transfer
+
+note as note1
+    TODO: add new methods to all controllers.
+end note
+
+note as note2
+    Every controller deals with User,
+    so it's better to move this common logic to 
+    abstract Controller class.
+end note
+
+integration -up- note1
+Controller -up- note2
+
+@enduml

@@ -1,0 +1,232 @@
+@startuml ClassDomain
+
+skinparam class {
+    BackgroundColor<<Repository>> SkyBlue
+    BorderColor<<Repository>> Navy
+    BackgroundColor<<Access>> Snow
+    BorderColor<<Access>> Plum
+    BackgroundColor<<Integration>> SandyBrown
+    BorderColor<<Integration>> Tomato
+    BackgroundColor<<Domain>> Gold
+    BorderColor<<Domain>> Red
+}
+
+component "<<Component>>\nDomain" as domain #Gold {
+    
+    component "<<sub-comp>>\nuser" as user #Bisque {
+        class UserManager {
+            + User getUserById(long id)
+            + List<User> getAll()
+            + User addAdmin(Administrator user)
+        }
+
+        interface IUsersRepo {
+            + User findAll()
+            + User findById(long id)
+        }
+
+        class User {
+            - long id
+            - int userId
+            - String email
+            - String password
+            - String fullName
+            - Role role
+        }
+
+        class Administrator {
+
+        }
+
+        enum Role {
+            USER
+            ADMIN
+        }
+
+        class CustomerManager {
+            + List<Customer> getAll()
+            + Customer getCustomerById(long id)
+            + boolean createCustomer(Customer customer)
+        }
+
+        interface ICustomersRepo {
+            + Customer findById(long id)
+        }
+
+        class Customer {
+            - String phoneNumber
+            - List<Account> accounts
+            - ICustomersRepo customersRepo
+            - IUsersRepo usersRepo
+        }
+
+        UserManager ---[hidden]> CustomerManager
+
+        UserManager o-> IUsersRepo
+        UserManager --> User
+        UserManager --> Role
+        User o-> Role
+
+        CustomerManager o-> ICustomersRepo
+        CustomerManager -> Customer
+
+        User <|-- Customer
+        User <|- Administrator
+
+        IUsersRepo o--> User
+        ICustomersRepo o-> Customer
+
+    }
+
+    component "<<sub-comp>>\naccount" as account #Bisque {
+        class AccountManager {
+            + Account getAccountById(long id)
+            + List<Account> getAll()
+            + getAccountsByCustomerId(long id)
+        }
+
+        interface IAccountsRepo {
+            + Account findById(long id)
+        }
+
+        class Account {
+            - long id
+            - String IBAN
+            - AccountType accountType
+            - Date openDate
+            - BigDecimal balance
+            - ICustomer customer
+            - List<Transaction> transactions
+            - IAccountsRepo accountsRepo
+        }
+
+        enum AccountType {
+            PRIMARY
+            SECONDARY
+        }
+
+        AccountManager o-> IAccountsRepo
+        AccountManager --> Account
+        AccountManager --> AccountType
+
+        IAccountsRepo o--> Account
+        Account o-> AccountType
+    }
+
+    ICustomersRepo <-- AccountManager
+    Customer <-- AccountManager
+
+    component "<<sub-comp>>\ntransaction" as transaction #Bisque {
+        class TransactionManager {
+            + List<Transaction> getAll()
+            + Transaction getById(long)
+            + List<Transaction> getByAccountId(long)
+            + void createTransaction(Transaction)
+            + void editTransaction(Transaction)
+            + void stornoTransaction(Transaction)
+        }
+
+        interface ITransactionsRepo {
+            + Transaction findById(long id)
+        }
+
+        interface ITransactionsLogRepo {
+            + Transaction findById(long id)
+        }
+
+        class Transaction {
+            - long id
+            - User sessionUser
+            - TransactionStatus status
+            - String description
+            - LocalDateTime dateTime
+            - List<TransactionRecord> transactionRecords
+            - ITransactionsRepo transactionsRepo
+        }
+
+        enum TransactionStatus {
+            OK
+            CORECTION
+            STORNED
+            STORNO
+        }
+
+        class TransactionRecord {
+            - long id
+            - Account account
+            - Direction direction
+            - BigDecimal amount
+            - Transaction transaction
+        }
+
+        class Direction {
+            CREDIT
+            DEBIT
+        }
+
+        class TransferManager {
+            + List<Transfer> getAll()
+            + void makeTransfer(Transfer)
+            + void requestForTransfer(Transfer)
+        }
+
+        class Transfer {
+            - String description
+            - String receiversFullName
+            - String accountIBAN
+            - BigDecimal amount
+        }
+
+
+        TransactionManager -----[hidden]> TransferManager
+
+        TransactionManager o-> ITransactionsRepo
+        TransactionManager o--> ITransactionsLogRepo
+        TransactionManager ---> Transaction
+        TransactionManager ---> TransactionStatus
+        ITransactionsRepo o--- Transaction
+        ITransactionsLogRepo o-- Transaction
+        Transaction o-> TransactionStatus
+
+        Transaction o--> TransactionRecord
+        TransactionRecord o-> Direction
+
+        TransferManager -> Transfer
+        TransactionManager <-----o TransferManager
+    }
+
+    IAccountsRepo <---- TransactionManager
+    Account <--- TransactionManager
+    ICustomersRepo <------ TransactionManager
+    Customer <------ TransactionManager
+}
+
+user -----[hidden]> account
+account ----[hidden]> transaction
+
+note as note1
+    TODO: add missing methods and properties.
+end note
+
+note as note2
+    It is better to split these classes into 3 different
+    subcomponents to have a clearlier view.
+end note
+
+note as note3
+    Repo interfaces inside Domain component
+    should not know anything about JPA.
+end note
+
+note as note4
+    It it better to have as much as possible
+    business logic inside manager classes
+    instead of controllers.
+end note
+
+domain -up- note1
+user -up- note2
+IUsersRepo -up- note3
+UserManager -up- note4
+
+@enduml
