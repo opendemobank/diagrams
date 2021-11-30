@@ -1,0 +1,119 @@
+@startuml
+title Object diagram No.2
+
+object bank{
+    Name = "Tartu Bank"
+}
+
+object "bank admin" as a{
+    id = 1111
+    firstName = benjamin
+    lastName = franklin
+    username = admin
+    password = bankismine
+    email = account@admin.bank
+}
+
+object customer1{
+    name = "Alex"
+    username = "apple"
+    password = hello
+    email = account1@user.bank
+}
+
+object customer2{
+    name = "Bob"
+    username = "pear"
+    password = byebye
+    email = account2@user.bank
+}
+
+object account1{
+    id = 23r23r234r
+    amount = 1000
+    currency_type = dollar
+}
+
+object account2{
+    id = veg4342f4
+    amount = 1000
+    currency_type = dollar
+}
+
+Object "transaction unchanged" as t1{
+    id = q349th345g93459p34
+    sender = Bob
+    reciever = Alex
+    amount = 1000
+    currency_type = dollar
+    title = "Paying the rent"
+    status = "unchanged"
+    description = "too expensive"
+}
+
+Object "transaction changed" as t2{
+    id = 87g9o88tc65futof7
+    sender = Bob
+    reciever = Alex
+    amount = 300
+    currency_type = dollar
+    title = "Gift"
+    status = "changed"
+    description = "buy something with this money"
+}
+
+Object "transaction storing" as t3{
+    id = 32r23fef2fe4f4w4f
+    sender = Bob
+    reciever = Alex
+    amount = 300
+    currency_type = dollar
+    title = "Birthday present"
+    status = "storing"
+    description = "buy something with this money"
+}
+
+Object "transaction stored" as t4{
+    id = 23r2434f345g3445g
+    sender = Bob
+    reciever = Alex
+    amount = 1000
+    currency_type = dollar
+    title = "Lunch"
+    status = "stored"
+    description = "tomorrow's lunch fee"
+}
+
+Object log1{
+    id = 23r23f3343434f3
+    cratedDate = 23/10/2021
+    createdTime = 12:32:43
+    lastModifiedDate = 23/10/2021
+    lastModifiedTime = 12:32:43
+}
+
+bank o--  a : controlls
+customer1 o-- account1 : has
+customer2 o-- account2 : has
+t1 *-- bank : manages
+t2 *-- bank : manages
+
+account1 *-- t1 : created
+account2 *-- t1 : created
+
+account1 *-- t2 : created
+account2 *-- t2 : created
+a *-- t2 : modified
+
+account1 *-- t3 : created
+account2 *-- t3 : created
+a *-- t3 : storing
+
+account1 *-- t4 : created
+account2 *-- t4 : created
+a *-- t4 : stored
+t4 *-- log1 : created
+a *-- log1 : stored in Database
+
+
+@enduml
