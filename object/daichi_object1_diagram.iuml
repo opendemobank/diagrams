@@ -1,0 +1,18 @@
+@startuml
+title Object diagram No.1
+
+object "bank admin" as a1 {
+    id = 1111
+    firstName = benjamin
+    lastName = franklin
+    username = admin
+    password = bankismine
+    email = account@admin.bank
+}
+
+object bank{
+    Name = "Tartu Bank"
+}
+
+bank *-- "1 .. n" a1
+@enduml
