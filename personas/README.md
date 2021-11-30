@@ -51,3 +51,60 @@
 | Goals and tasks: |  - Make sure to input all the data correctly when registering an account <br> - View all transactions to keep track of the money flow  <br> - See account information to assist customers |
 | Environment: | Knows basics of operating computers. Becomes frustrated easily when things do not go his way. |
 | Quote: | "But I filled all the fields correctly!" |
+
+
+## Daichi
+
+### Customer
+
+|||
+|---|---|
+| Persona: | A customer who opened an account a few days and not familiar with banking system.|
+| Photo: | <img src="https://pixabay.com/photos/grandma-old-age-old-woman-506341/" width="200"/>  |
+| Fictional name: | Andrew Dorothy|
+| Job title: | Grandma lives in USA. |
+| Demographics: | - 72 years old <br> - Lives in Seattle in USA <br> - Her son helped her to create an account in the bank <br> - She likes sewing and making cookies |
+| Goals and tasks: | - She is not familiar with technologies, so she was happy to use the bank since its interface is more user friendly than other banks. She also wants to send different currency by herself. |
+| Environment: | She often sends money to her grandson in Estonia. She struggled figuring out sending different currency on previous bank. |
+| Quote: | "What is this this? (pointing to her phone)" |
+
+
+|||
+|---|---|
+| Persona: | A customer who often transfer his money with friends.|
+| Photo: | <img src="https://pixabay.com/photos/model-businessman-corporate-2911332/" width="200"/>  |
+| Fictional name: | Yang Yang|
+| Job title: | Grandma lives in USA. |
+| Demographics: | - 21 years old <br> - Lives in New York in USA <br> - He is studying a sociology in bachelor's degree and he has many friends in a college. |
+| Goals and tasks: | - He is the type of person who always splits bill and often goes out with friends. Sometimes his friends pay the fee instead, but every weekend, he wants to make all the debt clear, so he wants to use p2p transaction.|
+| Environment: | He was tired of using previous bank system because he needed to type required information every time when he transfer money to new people. Fast and easy method to transfer money. |
+| Quote: | "I'm sick of typing information every time, why can't it be easier!" |
+
+
+### Admin
+
+|||
+|---|---|
+| Persona: | An administrator who loves her work. |
+| Photo: | <img src="https://pixabay.com/photos/dreadlocks-female-people-family-1169010/" width="200"/>  |
+| Fictional name: | Rashida Tanaka|
+| Job title: | Grandma lives in USA. |
+| Demographics: | - 28 years old. <br> - Her mother is from Azerbijan and her father is from Japan, and now lives in Estonia. <br> - Customer satisfaction to her job is very high. |
+| Goals and tasks: | - Since she gets lots of request from customers, she wants minimum steps to achieve customers desires such as storing transactions.|
+| Environment: | She loves her work so much that she often stays in her office until 7 PM every weekday. She always wants to increase the efficiency. |
+| Quote: | "Efficiency is everything!" |
+
+
+|||
+|---|---|
+| Persona: | An administrator who is very talkative and sometimes talking too much with customers |
+| Photo: | <img src="https://pixabay.com/photos/man-laptop-work-smile-pose-office-6208470/" width="200"/>  |
+| Fictional name: | David Randorf |
+| Job title: | Grandma lives in USA. |
+| Demographics: | - 32 years old. <br> - He didn't expect to work at bank, but he enjoyes talking with customers more than he imagined and he makes great performance as a result. |
+| Goals and tasks: | - Since he talks with customers a lot, he often hear some desires from customers. One major thing was to transfer different currency of the money. He brought this up to the board, and this function was implemented to a system. |
+| Environment: | His coworkers all love him and respect that he always get valuable and critical ideas from customers. P2p payment was also implemented thanks to his suggestions. He will keep bringing up ideas. |
+| Quote: | "Customers are great, coworkers are great, my salary is also getting greater! Let's chat everyone!" |
+
+
+
