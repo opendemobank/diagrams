@@ -107,4 +107,57 @@
 | Quote: | "Customers are great, coworkers are great, my salary is also getting greater! Let's chat everyone!" |
 
 
+## Carolin
+
+### Customer
+
+|||
+|---|---|
+| Persona: | Middle-aged businessman |
+| Photo: | <img src="https://image.freepik.com/free-photo/confident-middle-aged-man-portrait_23-2149051739.jpg" width="200"/>  |
+| Fictional name: | Steve|
+| Job title: | Company manager |
+| Demographics: | - 45 years old <br> - married for 20 years <br> - 2 children |
+| Goals and tasks: | He has been a businessman for half of his life. He knows the value of money and uses bank possibilities to the fullest. He makes a lot of transfers daily and likes to invest his earnings. He has several bank accounts which he uses for different purposes. He also has a lot of connections worldwide, so he sometimes needs to change the currency while making transfers.  |
+| Environment: | He’s main tasks include sending emails, making transfers in a bank, writing documents and filling in forms. |
+| Quote: | “Bank webpage is always open in my computer…” |
+
+
+|||
+|---|---|
+| Persona: | Student in University of Tartu |
+| Photo: | <img src="https://image.freepik.com/free-photo/pretty-beautiful-woman-with-blonde-long-hair-having-excited-happy-facial-expression_176420-14958.jpg" width="200"/>  |
+| Fictional name: | Mari|
+| Job title: | Master’s student in University of Tartu |
+| Demographics: | - 22 years old <br> - in a relationship <br> - no children <br> - has BSc in Economics |
+| Goals and tasks: | She is a good student and earns a good amount of stipend that she collects into her bank account. She goes to a lot of dates with his boyfriend, which she sometimes pays for. As she has very limited time, she always shops in the web. She is starting to get interesting in investing as well. |
+| Environment: | She is good with computers and technology overall. She is young and knows her way around technology. |
+| Quote: | “I still have some free time..” |
+
+### Admin
+
+|||
+|---|---|
+| Persona: | Administrator in Open Demo Bank |
+| Photo: | <img src="https://image.freepik.com/free-photo/business-woman-checkered-jacket-with-smile-while-sitting-desk-her-office_197531-10661.jpg" width="200"/>  |
+| Fictional name: | Kersti|
+| Job title: | Administrator for Open Demo Bank online system |
+| Demographics: | - 26 years old <br> - single <br> - no children |
+| Goals and tasks: | She likes numbers and calculating. She also really enjoys talking to people and helping them. The position as teller seemed exactly the one which would combine these two interests. Her tasks include registering users and their accounts, adding money, modifying transactions.|
+| Environment: | She knows how to connect with people. She is good with using computers and systems. She is great at math. |
+| Quote: | “I love helping people.” |
+
+
+|||
+|---|---|
+| Persona: | Administrator in Open Demo Bank |
+| Photo: | <img src="https://image.freepik.com/free-photo/waist-up-portrait-handsome-serious-unshaven-male-keeps-hands-together-dressed-dark-blue-shirt-has-talk-with-interlocutor-stands-against-white-wall-self-confident-man-freelancer_273609-16320.jpg" width="200"/>  |
+| Fictional name: | Kermo|
+| Job title: | Administrator for Open Demo Bank online system |
+| Demographics: | - 30 years old <br> - father of a 10 year old |
+| Goals and tasks: | He is good at paying attention to details and knows a lot about finance. He is tasks in work are keeping an eye on transactions activity, adding money when requested and registering new customers. He deals with different currency transfers. |
+| Environment: | He always have answers to people questions. He is great at working with computers. He has a lot of ideas how to improve the system. |
+| Quote: | “My second name is finance.” |
+
+
 
