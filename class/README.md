@@ -3,6 +3,9 @@
 ## Final
 
 ![](class.svg)
+![](ClassDomain.svg)
+![](ClassIntegration.svg)
+![](ClassRepository.svg)
 
 ## Proposed diagrams
 
