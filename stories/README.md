@@ -59,6 +59,77 @@ The arrows on the left indicate the direction of interaction: → Actor’s acti
 
 
 
+
+## Make a transfer (same currency) as a customer
+
+|Use Case UC-3: |Make a transfer|
+|-------------|-------------|
+|Initiating Actor:     |Customer |
+|Actor’s Goal:         |Make a transfer from my account to another account|
+|Participating Actors: |Bank |
+|Preconditions:        |Customer has an account; Customer has logged in |
+|Postconditions:       |The customer has successfully made a transfer. |
+
+Flow of Events for Main Success Scenario:
+
+| | | |
+|-------------|-------------|-------------|
+| →  | 1.  | Customer logs into the system using her email and password. |
+| ←  | 2.  | The system opens the main page.|
+| →  | 3.  | Customer clicks on a “make new transfer” button. |
+| ←  | 4.  | The system opens the money transfer form. |
+| →  | 5.  | Customer enters recipient information (either phone number, email, IBAN), amount to transfer, currency from, currency to, description. |
+| →  | 6.  | Customer clicks on the “Transfer” button. |
+| ←  | 7.  | The system alerts about a new successful transfer.|
+
+Flow of Events for Extensions (Alternate Scenarios): What could go wrong? List the exceptions to the routine and describe how they are handled
+
+| | | |
+|——————|-------------|-------------|
+| → | 5a. |The system message that some required field is not filled.|
+| → | 5b. |The receiver's phone number, email, IBAN does not exist, is incorrect or is unavailable|
+| → | 5c. |There is not enough money on sender’s account. |
+| ← | 5d. |The system displays an error message.|
+
+
+
+## Make a transfer (different currencies) as a customer
+
+|Use Case UC-4: |Make a transfer|
+|-------------|-------------|
+|Initiating Actor:     |Customer |
+|Actor’s Goal:         |Make a transfer from my account to another account|
+|Participating Actors: |Bank |
+|Preconditions:        |Customer has an account; Customer has logged in |
+|Postconditions:       |The customer has successfully made a transfer to different currency. |
+
+Flow of Events for Main Success Scenario:
+
+| | | |
+|-------------|-------------|-------------|
+| →  | 1.  | Customer logs into the system using her email and password. |
+| ←  | 2.  | The system opens the main page.|
+| →  | 3.  | Customer clicks on a “make new transfer” button. |
+| ←  | 4.  | The system opens the money transfer form. |
+| →  | 5.  | Customer enters recipient information (either phone number, email, IBAN), amount to transfer, currency from, currency to, description. |
+| →  | 6.  | Customer clicks on the “Transfer” button. |
+| ←  | 7.  | The system converts the currency.|
+| ←  | 8.  | The system alerts about a new successful transfer.|
+
+Flow of Events for Extensions (Alternate Scenarios): What could go wrong? List the exceptions to the routine and describe how they are handled
+
+| | | |
+|——————|-------------|-------------|
+| → | 5a. |The system message that some required field is not filled.|
+| → | 5b. |The receiver's phone number, email, IBAN does not exist, is incorrect or is unavailable|
+| → | 5c. |There is not enough money on sender’s account. |
+| → | 7a. |System does not have the possibility to convert this currency. |
+| ← | 7b. |The system displays an error message.|
+
+
+
+
+
 ## Player to player (p2p) payment (QR code transfer)
 
 |Use Case number: | UC-5 |
