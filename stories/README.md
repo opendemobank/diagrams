@@ -85,11 +85,13 @@ Flow of Events for Main Success Scenario:
 Flow of Events for Extensions (Alternate Scenarios): What could go wrong? List the exceptions to the routine and describe how they are handled
 
 | | | |
-|——————|-------------|-------------|
+|-------------|-------------|-------------|
 | → | 5a. |The system message that some required field is not filled.|
 | → | 5b. |The receiver's phone number, email, IBAN does not exist, is incorrect or is unavailable|
 | → | 5c. |There is not enough money on sender’s account. |
 | ← | 5d. |The system displays an error message.|
+
+The arrows on the left indicate the direction of interaction: → Actor’s action; ← System’s reaction
 
 
 
@@ -119,14 +121,14 @@ Flow of Events for Main Success Scenario:
 Flow of Events for Extensions (Alternate Scenarios): What could go wrong? List the exceptions to the routine and describe how they are handled
 
 | | | |
-|——————|-------------|-------------|
+|-------------|-------------|-------------|
 | → | 5a. |The system message that some required field is not filled.|
 | → | 5b. |The receiver's phone number, email, IBAN does not exist, is incorrect or is unavailable|
 | → | 5c. |There is not enough money on sender’s account. |
 | → | 7a. |System does not have the possibility to convert this currency. |
 | ← | 7b. |The system displays an error message.|
 
-
+The arrows on the left indicate the direction of interaction: → Actor’s action; ← System’s reaction
 
 
 
