@@ -95,6 +95,7 @@ component "<<Component>>\nDomain" as domain #Gold {
             - AccountType accountType
             - Date openDate
             - BigDecimal balance
+            - Currency currency
             - ICustomer customer
             - List<Transaction> transactions
             - IAccountsRepo accountsRepo
@@ -157,6 +158,7 @@ component "<<Component>>\nDomain" as domain #Gold {
             - Direction direction
             - BigDecimal amount
             - Transaction transaction
+            - Currency currency
         }
 
         class Direction {
@@ -177,6 +179,13 @@ component "<<Component>>\nDomain" as domain #Gold {
             - BigDecimal amount
         }
 
+        class Currency {
+            - long id
+            - String code
+            - String name
+            - BigDecimal rate
+        }
+
 
         TransactionManager -----[hidden]> TransferManager
 
@@ -190,6 +199,7 @@ component "<<Component>>\nDomain" as domain #Gold {
 
         Transaction o--> TransactionRecord
         TransactionRecord o-> Direction
+        Currency <-o TransactionRecord
 
         TransferManager -> Transfer
         TransactionManager <-----o TransferManager
@@ -199,6 +209,7 @@ component "<<Component>>\nDomain" as domain #Gold {
     Account <--- TransactionManager
     ICustomersRepo <------ TransactionManager
     Customer <------ TransactionManager
+    Account o------> Currency
 }
 
 user -----[hidden]> account
