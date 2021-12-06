@@ -1,0 +1,21 @@
+@startuml
+title (High level) UseCase Diagram
+
+rectangle "Banking System" {
+    (Login)
+    (Register)
+    (Makeing transfer) as m1
+    (Editing / Creating Transaction) as a1
+}
+
+:Customer: 
+:Administrator:
+
+Customer --> (Login)
+Customer --> (Register)
+Customer --> (m1)
+Administrator --> (Login)
+Administrator --> (Register)
+Administrator --> (a1)
+Customer ..> (a1) : Cannot access
+@enduml

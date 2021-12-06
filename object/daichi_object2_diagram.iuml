@@ -1,0 +1,86 @@
+@startuml
+title Object diagram No.2
+
+object bank{
+    Name = "Tartu Bank"
+}
+
+object "bank admin" as a{
+    id = 1111
+    firstName = benjamin
+    lastName = franklin
+    username = admin
+    password = bankismine
+    email = account@admin.bank
+}
+
+object customer1{
+    name = "Alex"
+    username = "apple"
+    password = hello
+    email = account1@user.bank
+}
+
+object customer2{
+    name = "Bob"
+    username = "pear"
+    password = byebye
+    email = account2@user.bank
+}
+
+object customer3{
+    name = "Roy"
+    username = "pumpkin"
+    password = seeyou
+    email = account3@user.bank
+}
+
+object account1{
+    id = 23r23r234r
+    amount = 1000
+    currency_type = dollar
+}
+
+object account2{
+    id = veg4342f4
+    amount = 1000
+    currency_type = dollar
+}
+
+object account3{
+    id = 09jve0rvje0r
+    amount = 1000
+    currency_type = Euro
+}
+
+Object transaction1{
+    id = q349th345g93459p34
+    sender = Bob
+    reciever = Alex
+    amount = 1000
+    currency_type = dollar
+    title = "Paying the rent"
+    description = "too expensive"
+}
+
+Object transaction2{
+    id = 87g9o88tc65futof7
+    sender = Alex
+    reciever = Roy
+    amount = 500
+    currency_type = dollar
+    title = "Gift"
+    description = "buy something with this money"
+}
+
+bank o-- "1 .. n" a
+customer1 o-- "1 .. n" account1
+customer2 o-- "1 .. n" account2
+customer3 o-- "1 .. n" account3
+account1 *-- "0 .. n" transaction1
+account2 *-- "0 .. n" transaction1
+account2 *-- "0 .. n" transaction2
+account3 *-- "0 .. n" transaction2
+transaction1 *-- bank : converts the currency
+transaction2 *-- bank : converts the currency
+@enduml
