@@ -1,7 +1,6 @@
 @startuml Component
 
 component "<<Component>>\nWeb client" as webClient
-component "<<Component>>\nAdmin client" as adminClient
 
 component "<<Component>>\nInternal Payments System" {
     component "<<Component>>\nIntegration" as integration #SandyBrown
@@ -31,12 +30,12 @@ component "<<Component>>\nInternal Payments System" {
     interface5 <.. domain
 }
 
-integration -up- http
-webClient ..> http
-adminClient ..> http
+integration -up- HTTP
+webClient ..> HTTP
 
 component "<<Component>>\nPayments Database" as paymentsDatabase
 
-repository ..> jdbc
-jdbc -- paymentsDatabase
+repository ..> JDBC
+JDBC -- paymentsDatabase
+
 @enduml
