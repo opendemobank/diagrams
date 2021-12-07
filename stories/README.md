@@ -191,3 +191,31 @@ Alternative flow:
 |-------------|-------------|
 | 3a-1. |If a cutomer doesn't know his or her account number, as an Adminitraotr, I type "last name", "first name", "Date of birth" to get the customer account. |
 | 3a-2. |As an administrator, I find the correct account that the customer wants to add the money. |
+
+## Editing the transaction as an admin
+
+|Use Case number: | UC-7 |
+|-------------|-------------|
+|Initiating Actor:     |Admin |
+|Actor’s Goal:         |Admin edits transaction|
+|Participating Actors: |Customer, bank |
+|Preconditions:        | - The bank has an admin <br> - The admin is logged in |
+|Postconditions:       | - A customer already created an account in the bank |
+
+Flow of Events for Main Success Scenario:
+
+| | |
+|-------------|-------------|
+| 1.  |As an Admin, I log in to my account |
+| 2.  |As an Admin, I search an account the customer has by referencing the account number |
+| 3.  |As an Admin, I found the account on my screen |
+| 4.  |As an Admin, I search for the transaction I want to edit. |
+| 5.  |As an Admin, I edit the transaction. |
+| 6.  |As an Admin, I click "save" so that I can confirm the transaction was successfully edited.
+
+Alternative flow:
+
+| | |
+|-------------|-------------|
+| 5a. |I edit the transaction incorrectly |
+| 6a. |I get an error message. |
