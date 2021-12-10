@@ -1,0 +1,75 @@
+@startuml
+skinparam style strictuml
+skinparam BoxPadding 10
+
+actor Customer as user
+actor Administrator as admin
+
+box "Presentation Layer" #fefece
+boundary "Admin Panel" as panel
+end box
+
+box "Application Layer" #SandyBrown
+control "User Controller" as userc
+control "Transaction Controller" as transactionc
+control "Account Controller" as accountc
+end box
+
+box "Persistence Layer" #SkyBlue
+database "User Database" as users
+database "Transaction Database" as transactions
+database "Account Database" as accounts
+database "Transaction Logs" as logs
+end box
+
+user -> admin ++ : Request editing the transaction
+admin --> user : Request received
+
+== Administrator log in ==
+
+create panel
+admin -> panel : Open admin panel
+panel --> admin
+admin -> panel ++ : Log in
+create userc
+panel -> userc ++ : Administrator log in request
+userc -> userc : Validate credentials
+create users
+userc -> users : Check for user existence
+users --> userc
+userc --> panel --
+panel --> admin --
+
+== Editing the transaction ==
+
+admin -> panel ++ : Open Customer's transactions page
+create transactionc
+panel -> transactionc ++ : Get Customer's transactions
+create transactions
+transactionc -> transactions : Get Customer's transactions
+transactions --> transactionc
+transactionc --> panel --
+panel --> admin --
+admin -> panel ++ : Open transaction to edit
+panel -> transactionc ++ : Request transaction edit
+transactionc -> transactions : Get transaction information
+transactions --> transactionc
+transactionc --> panel --
+panel --> admin --
+admin -> panel ++ : Input changes
+panel -> transactionc ++ : Edit the transaction
+create accountc
+transactionc -> accountc ++ : Change accounts balances
+create accounts
+accountc -> accounts : Update accounts balances
+accounts --> accountc
+accountc --> transactionc --
+transactionc -> transactions : Edit the transaction
+transactions --> transactionc
+create logs
+transactionc ->> logs : Log editing the transaction
+transactionc --> panel --
+panel --> admin --
+admin ->> user -- : Notify about successful transaction editing
+
+@enduml

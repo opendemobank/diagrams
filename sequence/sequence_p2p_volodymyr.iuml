@@ -1,0 +1,43 @@
+@startuml
+skinparam style strictuml
+skinparam BoxPadding 10
+
+actor Customer as user
+
+box "Presentation Layer" #fefece
+boundary "Web Client" as panel
+end box
+
+box "Application Layer" #SandyBrown
+control "User Controller" as userc
+control "Account Controller" as accountc
+end box
+
+box "Persistence Layer" #SkyBlue
+database "User Database" as users
+end box
+
+== Customer log in ==
+
+create panel
+user -> panel : Open web client
+panel --> user
+user -> panel ++ : Log in
+create userc
+panel -> userc ++ : Customer log in request
+userc -> userc : Validate credentials
+create users
+userc -> users : Check for user existence
+users --> userc
+userc --> panel --
+panel --> user --
+
+== Requesting P2P transfer ==
+user -> panel ++ : Create QR code for P2P transfer
+create accountc
+panel -> accountc : Generate URL for P2P transfer
+accountc --> panel
+panel -> panel : Generate QR code from the URL
+panel --> user --
+
+@enduml

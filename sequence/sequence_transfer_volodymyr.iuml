@@ -1,0 +1,68 @@
+@startuml
+skinparam style strictuml
+skinparam BoxPadding 10
+
+actor Customer as user
+
+box "Presentation Layer" #fefece
+boundary "Web Client" as panel
+end box
+
+box "Application Layer" #SandyBrown
+control "User Controller" as userc
+control "Transaction Controller" as transactionc
+control "Account Controller" as accountc
+end box
+
+box "Persistence Layer" #SkyBlue
+database "User Database" as users
+database "Account Database" as accounts
+database "Transaction Database" as transactions
+database "Transaction Logs" as logs
+end box
+
+== Customer log in ==
+
+create panel
+user -> panel : Open web client
+panel --> user
+user -> panel ++ : Log in
+create userc
+panel -> userc ++ : Customer log in request
+userc -> userc : Validate credentials
+create users
+userc -> users : Check for user existence
+users --> userc
+userc --> panel --
+panel --> user --
+
+== Making the transfer ==
+
+user -> panel : Make new transfer
+panel --> user
+user -> panel ++ : Provide transfer details
+create transactionc
+panel -> transactionc ++ : Create the transaction
+create accountc
+transactionc -> accountc ++ : Check whether receiver exists
+create accounts
+accountc -> accounts : Check whether receiver exists
+accounts --> accountc --
+accountc --> transactionc --
+transactionc -> accountc ++ : Check account balance
+accountc -> accounts : Get account balance
+accounts --> accountc --
+accountc --> transactionc --
+transactionc -> accountc ++ : Change accounts balances
+accountc -> accounts : Update accounts balances
+accounts --> accountc
+accountc --> transactionc --
+create transactions
+transactionc -> transactions : Create the transaction
+transactions --> transactionc
+create logs
+transactionc ->> logs : Log creating the transaction
+transactionc --> panel --
+panel --> user --
+
+@enduml

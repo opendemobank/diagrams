@@ -1,0 +1,70 @@
+@startuml
+skinparam style strictuml
+skinparam BoxPadding 10
+
+actor Customer as user
+actor Administrator as admin
+
+box "Presentation Layer" #fefece
+boundary "Admin Panel" as panel
+end box
+
+box "Application Layer" #SandyBrown
+control "User Controller" as userc
+control "Transaction Controller" as transactionc
+control "Account Controller" as accountc
+end box
+
+box "Persistence Layer" #SkyBlue
+database "User Database" as users
+database "Account Database" as accounts
+database "Transaction Database" as transactions
+database "Transaction Logs" as logs
+end box
+
+user -> admin ++ : Request adding money to the account balance
+
+== Administrator log in ==
+
+create panel
+admin -> panel : Open admin panel
+panel --> admin
+admin -> panel ++ : Log in
+create userc
+panel -> userc ++ : Administrator log in request
+userc -> userc : Validate credentials
+create users
+userc -> users : Check for user existence
+users --> userc
+userc --> panel --
+panel --> admin --
+admin --> user --
+
+== Adding money ==
+
+user -> admin ++ : Provide cash and account information
+admin -> panel ++ : Open Customer's account page
+create accountc
+panel -> accountc ++ : Get Customer's account
+create accounts
+accountc -> accounts : Get Customer's account
+accounts --> accountc --
+accountc --> panel --
+panel --> admin --
+admin -> panel ++ : Add money to the account
+create transactionc
+panel -> transactionc ++ : Create special transaction
+transactionc -> accountc ++ : Update account's balance
+accountc -> accounts : Update account's balance
+accounts --> accountc
+accountc --> transactionc --
+create transactions
+transactionc -> transactions : Create transaction
+transactions --> transactionc
+create logs
+transactionc ->> logs : Log creating the transaction
+transactionc --> panel --
+panel --> admin --
+admin --> user -- 
+
+@enduml
