@@ -219,3 +219,27 @@ Alternative flow:
 |-------------|-------------|
 | 5a. |I edit the transaction incorrectly |
 | 6a. |I get an error message. |
+
+## Storning the transaction
+
+| Use Case number: | UC-7 |
+|-------------|-------------|
+| Initiating Actor: | Admin |
+| Actor’s Goal: | Storning the transaction |
+| Participating Actors: | Customer, bank |
+| Preconditions: | - The bank has an admin <br> - Transaction was made |
+| Postconditions: | - Sender and receiver's balances are changed |
+
+Flow of Events for Main Success Scenario:
+
+| | |
+|-------------|-------------|
+| 1. | As an Admin, I log in to my account |
+| 2. | As an Admin, I search an account the customer has by referencing the account number |
+| 3. | As an Admin, I found the account on my screen |
+| 4. | As an Admin, I search for the transaction I want to storno. |
+| 5. | As an Admin, I click "Storno" to storno the transaction. |
+
+Alternative flow:
+
+There is no alternative flow.
