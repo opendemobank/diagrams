@@ -98,17 +98,17 @@ TransactionManager --[hidden]> Transaction
 Transaction --[hidden]> TransferManager
 TransferManager --[hidden]> Transfer
 
-note as note1
-    TODO: add new methods to all controllers.
-end note
+' note as note1
+'     TODO: add new methods to all controllers.
+' end note
 
-note as note2
-    Every controller deals with User,
-    so it's better to move this common logic to 
-    abstract Controller class.
-end note
+' note as note2
+'     Every controller deals with User,
+'     so it's better to move this common logic to 
+'     abstract Controller class.
+' end note
 
-integration -up- note1
-Controller -up- note2
+' integration -up- note1
+' Controller -up- note2
 
 @enduml

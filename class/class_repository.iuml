@@ -80,17 +80,17 @@ org.springframework.data.jpa.repository.JpaRepository <|- UsersRepo
 org.springframework.data.jpa.repository.JpaRepository <|--- CustomersRepo
 org.springframework.data.jpa.repository.JpaRepository <|----- AccountsRepo
 
-note as note1
-    TODO: add new methods.
-end note
+' note as note1
+'     TODO: add new methods.
+' end note
 
-note as note2
-    Idea here is to invert dependencies that
-    Domain layer would not know anything about Repository layer,
-    in this case Spring JPA magic.
-end note
+' note as note2
+'     Idea here is to invert dependencies that
+'     Domain layer would not know anything about Repository layer,
+'     in this case Spring JPA magic.
+' end note
 
-UsersRepo -up- note1
-UsersRepo -up- note2
+' UsersRepo -up- note1
+' UsersRepo -up- note2
 
 @enduml

@@ -215,29 +215,29 @@ component "<<Component>>\nDomain" as domain #Gold {
 user -----[hidden]> account
 account ----[hidden]> transaction
 
-note as note1
-    TODO: add missing methods and properties.
-end note
+' note as note1
+'     TODO: add missing methods and properties.
+' end note
 
-note as note2
-    It is better to split these classes into 3 different
-    subcomponents to have a clearlier view.
-end note
+' note as note2
+'     It is better to split these classes into 3 different
+'     subcomponents to have a clearlier view.
+' end note
 
-note as note3
-    Repo interfaces inside Domain component
-    should not know anything about JPA.
-end note
+' note as note3
+'     Repo interfaces inside Domain component
+'     should not know anything about JPA.
+' end note
 
-note as note4
-    It it better to have as much as possible
-    business logic inside manager classes
-    instead of controllers.
-end note
+' note as note4
+'     It it better to have as much as possible
+'     business logic inside manager classes
+'     instead of controllers.
+' end note
 
-domain -up- note1
-user -up- note2
-IUsersRepo -up- note3
-UserManager -up- note4
+' domain -up- note1
+' user -up- note2
+' IUsersRepo -up- note3
+' UserManager -up- note4
 
 @enduml
