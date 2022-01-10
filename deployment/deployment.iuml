@@ -4,27 +4,17 @@ actor "User" as u
 
 cloud "AWS VPC" {
     node "EC2 instance" {
+      rectangle "Node server" {
+        artifact "Frontend" as f
+      }
         stack "docker-compose" {
-            rectangle "Docker container" as d1 {
-                rectangle "Node server" {
-                    artifact "Frontend" as f
-                }
-            }
             rectangle "Docker container" as d2 {
                 rectangle "JVM" {
                     artifact "Backend" as b
                 }
             }
-            rectangle "Docker container" as d3 {
-                database "PostgreSQL" as db
-                storage "persistent volume" as pv
-                db -left(0)- pv
-            }
-            f -down-> b
-            b -down-> db
         }
-        folder "persistent volume" as pvf
-        pv .down. pvf
+        f -down-> b
     }
 }
 
